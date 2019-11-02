@@ -1,0 +1,13 @@
+#ident	"@(#)default	1.4	92/12/23 SMI"	/* SVr4.0  1.5.2.1	*/ 
+# https://docs.oracle.com/cd/E19683-01/817-3814/6mjcp0qm6/index.html
+mail=
+instance=overwrite
+partial=nocheck
+runlevel=ask
+idepend=nocheck
+rdepend=ask
+space=ask
+setuid=nocheck
+conflict=nocheck
+action=nocheck
+basedir=default
