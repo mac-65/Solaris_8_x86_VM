@@ -21,12 +21,16 @@ but after getting things to actually work was pretty satisfing and fun.
 
 There will probably be errors and omissions, but I hope these steps will be useful.
 
-:boom: This is still in "beta", so there are likely <i>many</i> bugs, incomplete and missing features and documentation,
+:boom: There are likely <i>many</i> bugs, incomplete and missing features and documentation,
 but I hope these steps will be useful.
 
 # Requirements
 
 First, versions of the software used:
 
-The VirtualBox version is 4.3.32-1.
+The VirtualBox version is 4.3.32-1.  I've had later versions of VirtualBox
+crash and burn with some VMs I've built in the past.  It's a problem because
+as far as I know, it's not possible to have multiple versions of VirtualBox
+installed on the same machine (like you can do with the gcc compiler collection, e.g.).
+
 
