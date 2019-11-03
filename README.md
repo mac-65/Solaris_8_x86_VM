@@ -36,6 +36,7 @@ whether this SOFTWARE PRODUCT is compatible with your equipment and other softwa
 You are also solely responsible for the protection of your equipment and the backup of your data,
 and THE PROVIDER will not be liable for any damages you may suffer in connection with using,
 modifying, or distributing this SOFTWARE PRODUCT.
+s { color: green }This is a test of ~~some colored text~~
 
 # System Requirements
 
