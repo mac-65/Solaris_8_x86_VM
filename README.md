@@ -37,12 +37,7 @@ You are also solely responsible for the protection of your equipment and the bac
 and THE PROVIDER will not be liable for any damages you may suffer in connection with using,
 modifying, or distributing this SOFTWARE PRODUCT.<br>
 :exclamation:
-<svg width="800" height="50" xmlns="http://www.w3.org/2000/svg">
-<rect width="100%" height="100%" style="fill: #00000000"/>
-<text x="10%" y="50%" text-anchor="middle" alignment-baseline="middle" font-weight="bold" fill="#f00000">
-This SOFTWARE PRODUCT is provided by THE PROVIDER "as is" and "with all faults."
-</text>
-</svg>
+[![](./svgs/disclaimer.svg)](https://github.com/trending?l=ABAP)
 <!--
 [//]: # <text x="10%" y="50%" font-size="18" text-anchor="middle" alignment-baseline="middle" font-family="sans-serif" fill="#f00000">
 [//]: # <svg width="800" height="50" xmlns="http://www.w3.org/2000/svg">
