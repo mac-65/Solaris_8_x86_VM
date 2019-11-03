@@ -27,7 +27,7 @@ There will probably be errors and omissions, but I hope these steps will be usef
 [//]: # (https://www.javaworld.com/article/2073149/software-disclaimer.html)
 -->
 ### Disclaimer
-:exclamation: 
+:exclamation:
 <strong>This SOFTWARE PRODUCT is provided by THE PROVIDER "as is" and "with all faults."</strong><br>
 THE PROVIDER makes no representations or warranties of any kind concerning the safety, suitability,
 lack of viruses, inaccuracies, typographical errors, or other harmful components of this SOFTWARE PRODUCT.
@@ -35,8 +35,18 @@ There are inherent risks and dangers in the use of any software, and you are sol
 whether this SOFTWARE PRODUCT is compatible with your equipment and other software installed on your equipment.
 You are also solely responsible for the protection of your equipment and the backup of your data,
 and THE PROVIDER will not be liable for any damages you may suffer in connection with using,
-modifying, or distributing this SOFTWARE PRODUCT.
-s { color: green }This is a test of ~~some colored text~~
+modifying, or distributing this SOFTWARE PRODUCT.<br>
+:exclamation:
+<svg width="800" height="50" xmlns="http://www.w3.org/2000/svg">
+<rect width="100%" height="100%" style="fill: #00000000"/>
+<text x="10%" y="50%" text-anchor="middle" alignment-baseline="middle" font-weight="bold" fill="#f00000">
+This SOFTWARE PRODUCT is provided by THE PROVIDER "as is" and "with all faults."
+</text>
+</svg>
+<!--
+[//]: # <text x="10%" y="50%" font-size="18" text-anchor="middle" alignment-baseline="middle" font-family="sans-serif" fill="#f00000">
+[//]: # <svg width="800" height="50" xmlns="http://www.w3.org/2000/svg">
+-->
 
 # System Requirements
 
