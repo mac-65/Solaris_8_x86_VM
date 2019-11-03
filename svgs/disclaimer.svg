@@ -1,6 +1,6 @@
 <svg width="800" height="50" xmlns="http://www.w3.org/2000/svg">
 <rect width="100%" height="100%" style="fill: #00000000"/>
-<text x="50%" y="50%" text-anchor="middle" alignment-baseline="middle" font-weight="bold" font-family="sans-serif" fill="#f00000">
-This SOFTWARE PRODUCT is provided by THE PROVIDER "as is" and "with all faults." XXX
+<text x="50%" y="50%" text-anchor="middle" alignment-baseline="middle" font-size="16" font-weight="bold" font-family="sans-serif" fill="#f00000">
+This SOFTWARE PRODUCT is provided by THE PROVIDER "as is" and "with all faults."
 </text>
 </svg>
