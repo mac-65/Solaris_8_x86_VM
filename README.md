@@ -52,7 +52,7 @@ don't work).
 ![sample](./images/Solaris_8-availability.png)<br>
 You should download all of the Solaris 8 x86 ISO images:
 
-* | Filename         | Image md5sum | Notes |
+| Filename         | Image md5sum | Notes |
 | :----            | :----:       | ---- |
 | <code>sol-8-u7-ia-v1.iso</code>      | <code>c243aa080e4c503f60cca48a8fd54e47</code> | Boot with this image |
 | <code>sol-8-u7-ia-v2.iso</code>      | <code>6c63bcbbf9e92ed946f1435f6bb89e5f</code> | 2nd install image |
