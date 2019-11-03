@@ -36,8 +36,8 @@ whether this SOFTWARE PRODUCT is compatible with your equipment and other softwa
 You are also solely responsible for the protection of your equipment and the backup of your data,
 and THE PROVIDER will not be liable for any damages you may suffer in connection with using,
 modifying, or distributing this SOFTWARE PRODUCT.<br>
-:exclamation:
-[![](./svgs/disclaimer.svg)](https://github.com/trending?l=ABAP)
+:exclamation:<br>
+[![](./svgs/disclaimer.svg)]()
 <!--
 [//]: # <text x="10%" y="50%" font-size="18" text-anchor="middle" alignment-baseline="middle" font-family="sans-serif" fill="#f00000">
 [//]: # <svg width="800" height="50" xmlns="http://www.w3.org/2000/svg">
