@@ -51,6 +51,7 @@ don't work).
 * The Solaris 8 x86 version is available on [archive.org](https://archive.org/download/sol-8-u7-ia).<br>
 ![sample](./images/Solaris_8-availability.png)<br>
 You should download all of the Solaris 8 x86 ISO images:<br>
+
 | Filename         | Image md5sum | Notes      |
 | :----            | :----:       | ----       |
 | <code>sol-8-u7-ia-v1.iso</code>      | <code>c243aa080e4c503f60cca48a8fd54e47</code> | Boot with this image |
