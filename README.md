@@ -28,7 +28,7 @@ There will probably be errors and omissions, but I hope these steps will be usef
 -->
 ### Disclaimer
 :exclamation: 
-<strong>This SOFTWARE PRODUCT is provided by THE PROVIDER "as is" and "with all faults."</strong>
+<strong>This SOFTWARE PRODUCT is provided by THE PROVIDER "as is" and "with all faults."</strong><br>
 THE PROVIDER makes no representations or warranties of any kind concerning the safety, suitability,
 lack of viruses, inaccuracies, typographical errors, or other harmful components of this SOFTWARE PRODUCT.
 There are inherent risks and dangers in the use of any software, and you are solely responsible for determining
@@ -41,15 +41,22 @@ modifying, or distributing this SOFTWARE PRODUCT.
 
 ### First, the host versions of the software used:
 
-* The VirtualBox version is <code>4.3.32-1</code> (rpmfusion-free on <code>Fedora 21 x86_64</code>).
+* The VirtualBox version is <code>4.3.32-1</code> (rpmfusion-free on <code>Fedora 21 x86_64, 4.1.13-100.fc21.x86_64</code>).
 <br>I've had later versions of VirtualBox crash and burn with some VMs I've built in the past.
 It's a problem because as far as I know, it's not possible to <strong>easily</strong> have multiple versions of VirtualBox
 installed on the same machine (like you can do with the gcc compiler collection, e.g.).
 There might be a way, but I haven't tried it and my version runs all of my VMs fine
 (although the creature comforts added in later versions are nice, but the VMs
 don't work).
-* The Solaris 8 x86 version is available on [archive.org](https://archive.org/download/sol-8-u7-ia).
-![sample](/images/Solaris_8-availability.png)
-more text
+* The Solaris 8 x86 version is available on [archive.org](https://archive.org/download/sol-8-u7-ia).<br>
+![sample](./images/Solaris_8-availability.png)<br>
+You should download all of the Solaris 8 x86 ISO images:<br>
+| Filename         | Image md5sum | Notes      |
+| ---------------- | :------------: | ---------- |
+| <code>sol-8-u7-ia-v1.iso</code>      | <code>c243aa080e4c503f60cca48a8fd54e47</code> | |
+| <code>sol-8-u7-ia-v2.iso</code>      | <code>6c63bcbbf9e92ed946f1435f6bb89e5f</code> | |
+| <code>sol-8-u7-lang-ia.iso</code>    | <code>6164e7e2d24f2291689f2b1f82fccc0b</code> | |
+| <code>sol-8-u7-install-ia.iso</code> | <code>91029b86d9eb130a73d83e7a67a817df</code> | This ISO image is not used in these steps. |
 
+testing ...
 
