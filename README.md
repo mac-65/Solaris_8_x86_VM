@@ -27,8 +27,7 @@ There will probably be errors and omissions, but I hope these steps will be usef
 [//]: # (https://www.javaworld.com/article/2073149/software-disclaimer.html)
 -->
 ### Disclaimer
-:exclamation:
-<strong>This SOFTWARE PRODUCT is provided by THE PROVIDER "as is" and "with all faults."</strong><br>
+[![](./svgs/disclaimer.svg)]()
 THE PROVIDER makes no representations or warranties of any kind concerning the safety, suitability,
 lack of viruses, inaccuracies, typographical errors, or other harmful components of this SOFTWARE PRODUCT.
 There are inherent risks and dangers in the use of any software, and you are solely responsible for determining
@@ -36,12 +35,6 @@ whether this SOFTWARE PRODUCT is compatible with your equipment and other softwa
 You are also solely responsible for the protection of your equipment and the backup of your data,
 and THE PROVIDER will not be liable for any damages you may suffer in connection with using,
 modifying, or distributing this SOFTWARE PRODUCT.<br>
-:exclamation:<br>
-[![](./svgs/disclaimer.svg)]()
-<!--
-[//]: # <text x="10%" y="50%" font-size="18" text-anchor="middle" alignment-baseline="middle" font-family="sans-serif" fill="#f00000">
-[//]: # <svg width="800" height="50" xmlns="http://www.w3.org/2000/svg">
--->
 
 # System Requirements
 
