@@ -3,3 +3,6 @@ RCS
 pngass-fold-render
 git-github
 git-local
+#
+make-github.sh
+make-local.sh

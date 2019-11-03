@@ -28,7 +28,7 @@ There will probably be errors and omissions, but I hope these steps will be usef
 -->
 ### Disclaimer
 :exclamation: 
-This SOFTWARE PRODUCT is provided by THE PROVIDER "as is" and "with all faults."
+<strong>This SOFTWARE PRODUCT is provided by THE PROVIDER "as is" and "with all faults."</strong>
 THE PROVIDER makes no representations or warranties of any kind concerning the safety, suitability,
 lack of viruses, inaccuracies, typographical errors, or other harmful components of this SOFTWARE PRODUCT.
 There are inherent risks and dangers in the use of any software, and you are solely responsible for determining
@@ -41,12 +41,15 @@ modifying, or distributing this SOFTWARE PRODUCT.
 
 ### First, the host versions of the software used:
 
-* The VirtualBox version is <code>4.3.32-1</code> (rpmfusion-free on Fedora 21 x86_64).
+* The VirtualBox version is <code>4.3.32-1</code> (rpmfusion-free on <code>Fedora 21 x86_64</code>).
 <br>I've had later versions of VirtualBox crash and burn with some VMs I've built in the past.
 It's a problem because as far as I know, it's not possible to <strong>easily</strong> have multiple versions of VirtualBox
 installed on the same machine (like you can do with the gcc compiler collection, e.g.).
 There might be a way, but I haven't tried it and my version runs all of my VMs fine
 (although the creature comforts added in later versions are nice, but the VMs
 don't work).
+* The Solaris 8 x86 version is available on [archive.org](https://archive.org/download/sol-8-u7-ia).
+![sample](/images/Solaris_8-availability.png)
+more text
 
 
