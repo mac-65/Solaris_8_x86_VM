@@ -14,22 +14,35 @@ using a virtual machine makes it easy.
 But, building the virtual machine had its challenges from:
 * finding installable ISO images,
 * finding recommended patches, and
-* "fixing" things that seemed to have been broken in the original OS and patches.
+* "fixing" things that seemed to have been broken in the original OS and the patches.
 
 The process took longer than I expected
-but after getting things to actually work was pretty satisfing and fun.
-
+but after getting things to actually work was pretty satisfying and fun.
 There will probably be errors and omissions, but I hope these steps will be useful.
 
-:boom: There are likely <i>many</i> bugs, incomplete and missing features and documentation,
-but I hope these steps will be useful.
+:boom: There are likely <i>many</i> bugs, errors, incomplete and missing features and documentation.
+<!--
+[//]: # (https://alvinalexander.com/technology/markdown-comments-syntax-not-in-generated-output)
+[//]: # (https://stackoverflow.com/questions/4823468/comments-in-markdown)
+[//]: # (https://www.javaworld.com/article/2073149/software-disclaimer.html)
+-->
+### Disclaimer
+:exclamation: 
+This SOFTWARE PRODUCT is provided by THE PROVIDER "as is" and "with all faults."
+THE PROVIDER makes no representations or warranties of any kind concerning the safety, suitability,
+lack of viruses, inaccuracies, typographical errors, or other harmful components of this SOFTWARE PRODUCT.
+There are inherent risks and dangers in the use of any software, and you are solely responsible for determining
+whether this SOFTWARE PRODUCT is compatible with your equipment and other software installed on your equipment.
+You are also solely responsible for the protection of your equipment and the backup of your data,
+and THE PROVIDER will not be liable for any damages you may suffer in connection with using,
+modifying, or distributing this SOFTWARE PRODUCT.
 
-# Requirements and Acquiring Software and Patches
+# System Requirements
 
-First, versions of the software used:
+### First, the host versions of the software used:
 
-The VirtualBox version is 4.3.32-1 (rpmfusion-free on Fedora 21 x86_64).
-I've had later versions of VirtualBox crash and burn with some VMs I've built in the past.
+* The VirtualBox version is <code>4.3.32-1</code> (rpmfusion-free on Fedora 21 x86_64).
+<br>I've had later versions of VirtualBox crash and burn with some VMs I've built in the past.
 It's a problem because as far as I know, it's not possible to <strong>easily</strong> have multiple versions of VirtualBox
 installed on the same machine (like you can do with the gcc compiler collection, e.g.).
 There might be a way, but I haven't tried it and my version runs all of my VMs fine
