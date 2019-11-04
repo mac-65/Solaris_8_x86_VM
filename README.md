@@ -27,14 +27,14 @@ There will probably be errors and omissions, but I hope these steps will be usef
 [//]: # (https://www.javaworld.com/article/2073149/software-disclaimer.html)
 -->
 ### Disclaimer
-[![](./svgs/disclaimer.svg)]()
+![Software is provided "as is" and "with all faults."](./svgs/disclaimer.svg)
 THE PROVIDER makes no representations or warranties of any kind concerning the safety, suitability,
-lack of viruses, inaccuracies, typographical errors, or other harmful components of this SOFTWARE PRODUCT.
+lack of viruses, inaccuracies, typographical errors, or other harmful components of this SOFTWARE.
 There are inherent risks and dangers in the use of any software, and you are solely responsible for determining
-whether this SOFTWARE PRODUCT is compatible with your equipment and other software installed on your equipment.
+whether this SOFTWARE is compatible with your equipment and other software installed on your equipment.
 You are also solely responsible for the protection of your equipment and the backup of your data,
 and THE PROVIDER will not be liable for any damages you may suffer in connection with using,
-modifying, or distributing this SOFTWARE PRODUCT.<br>
+modifying, or distributing this SOFTWARE.<br>
 
 # System Requirements
 
@@ -47,7 +47,7 @@ installed on the same machine (like you can do with the gcc compiler collection,
 There might be a way, but I haven't tried it and my version runs all of my VMs fine
 (although the creature comforts added in later versions are nice, but the VMs
 don't work).
-* The Solaris 8 x86 version is available on [archive.org](https://archive.org/download/sol-8-u7-ia).<br>
+* The Solaris 8 x86 version is available on [archive.org](https://archive.org/download/sol-8-u7-ia).<br><br>
 ![sample](./images/Solaris_8-availability.png)<br>
 You should download all of the Solaris 8 x86 ISO images:
 
@@ -58,10 +58,13 @@ You should download all of the Solaris 8 x86 ISO images:
 | <code>sol-8-u7-lang-ia.iso</code>    | <code>6164e7e2d24f2291689f2b1f82fccc0b</code> | Optional languages image |
 | <code>sol-8-u7-install-ia.iso</code> | <code>91029b86d9eb130a73d83e7a67a817df</code> | This ISO image is not used in these steps. |
 
-* These ISO will build an installation with the following characteristics (from <code>/etc/release</code>):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solaris 8 2/02 s28x_u7wos_08a INTEL<br>
-&nbsp;&nbsp;&nbsp;Copyright 2002 Sun Microsystems, Inc.&nbsp;&nbsp;All Rights Reserved.<br>
-                   Assembled 18 December 2001<br>
+* These ISO will build a Solaris installation with the following characteristics (from <code>/etc/release</code>):<br>
+
+<div align="center">
+Solaris 8 2/02 s28x_u7wos_08a INTEL<br>
+Copyright 2002 Sun Microsystems, Inc.&nbsp;&nbsp;All Rights Reserved.<br>
+Assembled 18 December 2001<br>
+</div>
 
 Some Markdown text with <span style="color:blue">some *blue* text</span>.
 testing ...
