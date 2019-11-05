@@ -48,7 +48,7 @@ modifying, or distributing this SOFTWARE.<br>
 <br>I've had later versions of VirtualBox crash and burn with some VMs I've built in the past.
 It's a problem because as far as I know, it's not possible to <strong>easily</strong> have multiple versions of VirtualBox
 installed on the same machine (like you can do with the gcc compiler collection, e.g.).
-There might be a way, but I haven't tried it and my version runs all of my VMs fine
+There might be a way, but I haven't tried it and this version runs all of my VMs fine
 (although the creature comforts added in later versions are nice, but the VMs
 don't work).
 
@@ -57,7 +57,7 @@ don't work).
 ![sample](./images/Solaris_8-availability.png)<br>
 You should download all of the Solaris 8 x86 ISO images:<br>
 
-| :cd: Filename    | Image md5sum | :notebook: Notes |
+| :cd: Filename    | md5sum | :notebook: Notes |
 | :----            | :----:       | ---- |
 | <code>sol-8-u7-ia-v1.iso</code>      | <code>c243aa080e4c503f60cca48a8fd54e47</code> | Boot with this image |
 | <code>sol-8-u7-ia-v2.iso</code>      | <code>6c63bcbbf9e92ed946f1435f6bb89e5f</code> | 2nd install image |
@@ -68,17 +68,18 @@ You should download all of the Solaris 8 x86 ISO images:<br>
 after all of the steps have been performed in this guide (from <code>/etc/release</code>):<br><br>
 ![Solaris 8 2/02 s28x_u7wos_08a INTEL](./images/Solaris-8-x86-Desktop.png)<br>
 
-### Solaris 8 x86 Recommended Patch Cluster
 Everything up to this point (and following these steps) will allow you to build a working
-Solaris 8 x86 virtual machine.  Networking should be fine (manual steps are necessary to
-configure the network).  If you've selected <strong>SoundBlaster 16</strong> as the Audio Controller
-in VirtualBox, you can listen to that nostalgic Sun [cowbell](/usr/demo/SOUNDS/sounds/cowbell.au) sound once again.
+Solaris 8 x86 virtual machine.
+Networking should be fine (manual steps are necessary to configure the network).
+If you've selected <strong>SoundBlaster 16</strong> as the Audio Controller in VirtualBox,
+you can listen to that nostalgic Sun cowbell sound (<code>cat /usr/demo/SOUNDS/sounds/cowbell.au > /dev/audio</code>) once again.
 But you'll be missing many tools that are taken for granted in a modern Linux system, for example:
-* a C compiler (Solaris 8 does <strong>not</strong> ship with a C compiler),
+* a C compiler (Solaris 8 did <strong>not</strong> even ship with the K&R C compiler),
 * the ssh suite (the pseudo-devices <code>/dev/random</code> and <code>/dev/urandom</code> do not exist), and of course
 * the lack of any of the <i>modern</i> tools, e.g. <strong>openssl</strong>, <strong>openssh</strong>,
 and <strong>gnu</strong> tools are a notable examples.
 
+### Solaris 8 x86 Recommended Patch Cluster
 Sadly http://sunsolve.sun.com [sic] no longer exists, and finding patches can be difficult.
 While it's nicest to apply all of the recommended patches, the most important patch is <strong>112439-02</strong>
 which provides the pseudo-devices <code>/dev/random</code> and <code>/dev/urandom</code>.
@@ -92,7 +93,28 @@ Fortunately, [tgcware](http://jupiterrise.com/tgcware/)
 is there to the [rescue](http://jupiterrise.com/tgcware/sunos5.8_x86/stable/)!
 I can't stress enough what a tremendous help and time-saver this was.
 There's a good selection of tools assembled (with various versions of some of the tools) and
-each package that was built is listed with its name, brief description, and its <code>md5sum</code> checksum.
+each package that was prebuilt is listed with its name, brief description, and its <code>md5sum</code> checksum.
+<br>
+This guide includes a simple script for getting the prebuilt binaries from [tgcware](http://jupiterrise.com/tgcware/sunos5.8_x86/stable/).
+
+# Getting Started
+This guide includes some package install scripts to help smooth the process
+and perform some task that are minor enhancements or missing in the original.
+It is recommended that you review each script and make any changes suited to
+your particular enviornment or needs.  The scripts are named as <code>001-gzip.sh</code>, etc.,
+so that <code>ls 0\*.sh</code> will list all of the scripts.
+<br>
+Get all of the software and packages.
+#### 1. Download the ISOs.
+ * Use your browser or use <code>wget</code> to get the ISOs, e.g.<br>
+<code>wget -c https://archive.org/download/sol-8-u7-ia/sol-8-u7-ia-v1.iso</code>
+
+#### 2. Download the Solaris 8 x86 Recommended Patch Cluster.
+#### 3. Download the tgcware packages that are used by the install scripts.
+All of the packages from [tgcware](http://jupiterrise.com/tgcware/sunos5.8_x86/stable/) are <code>.gz</code> files
+<i>except</i> for the [gzip](http://jupiterrise.com/tgcware/sunos5.8_x86/stable/gzip-1.6-1.tgc-sunos5.8-i386-tgcware) package
+(for obvious reasons).  I decided, after a few install iterations, the easiest thing to do was to 
+create an ISO image containing all of the packages and scripts used to build the system.
 
 Some Markdown text with <span style="color:blue">some *blue* text</span>.
 testing ...
