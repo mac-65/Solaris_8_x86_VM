@@ -53,6 +53,7 @@ don't work).
 * The Solaris 8 x86 ISOs are available on [archive.org](https://archive.org/download/sol-8-u7-ia).<br><br>
 ![sample](./images/Solaris_8-availability.png)<br>
 You should download all of the Solaris 8 x86 ISO images:<br>
+
 | :cd: Filename    | Image md5sum | :notebook: Notes |
 | :----            | :----:       | ---- |
 | <code>sol-8-u7-ia-v1.iso</code>      | <code>c243aa080e4c503f60cca48a8fd54e47</code> | Boot with this image |
@@ -70,7 +71,7 @@ Solaris 8 x86 virtual machine.  Networking should be fine (manual steps are nece
 configure the network).  If you've selected <strong>SoundBlaster 16</strong> as the Audio
 Controller in VirtualBox, you can listen to that good olde Sun Cowbell sound once again.
 But you'll be missing many tools that are taken for granted in a modern Linux system, for example:
-* Solaris 8 does <strong>not</strong> ship with a C compiler,
+* a C compiler (Solaris 8 does <strong>not</strong> ship with a C compiler),
 * the ssh suite (the pseudo-devices <code>/dev/random</code> and <code>/dev/urandom</code> do not exist), and of course
 * the lack of any of the <i>modern</i> tools, e.g. <strong>openssl</strong>, <strong>openssh</strong>,
 and <strong>gnu</strong> tools are a notable exceptions.
