@@ -13,18 +13,21 @@ Once in a while, I need to do something in this olde OS, and
 using a virtual machine makes it easy.
 But, building the virtual machine had its challenges from:
 * finding installable ISO images,
-* finding recommended patches, and
+* finding recommended patches,
+* finding pre-built packages, and
 * "fixing" things that seemed to have been broken in the original OS and the patches.
 
 The process took longer than I expected
 but after getting things to actually work was pretty satisfying and fun.
-There will probably be errors and omissions, but I hope these steps will be useful.
 
-<!--
-[//]: # (https://alvinalexander.com/technology/markdown-comments-syntax-not-in-generated-output)
-[//]: # (https://stackoverflow.com/questions/4823468/comments-in-markdown)
-[//]: # (https://www.javaworld.com/article/2073149/software-disclaimer.html)
--->
+#### Not Covered In This Guide
+Graphic support beyond CGA.  Looks like it's possible (and may be non-trivial),
+just haven't looked into it yet.
+
+#### Acknowledgements and Attribution
+I searched many dozens of sites for answers, the major sites are listed in
+these steps, TODO
+
 ## Disclaimer
 ![Software is provided "as is" and "with all faults."](./svgs/disclaimer.svg)
 THE PROVIDER makes no representations or warranties of any kind concerning the safety, suitability,
@@ -68,13 +71,13 @@ after all of the steps have been performed in this guide (from <code>/etc/releas
 ### Solaris 8 x86 Recommended Patch Cluster
 Everything up to this point (and following these steps) will allow you to build a working
 Solaris 8 x86 virtual machine.  Networking should be fine (manual steps are necessary to
-configure the network).  If you've selected <strong>SoundBlaster 16</strong> as the Audio
-Controller in VirtualBox, you can listen to that good olde Sun Cowbell sound once again.
+configure the network).  If you've selected <strong>SoundBlaster 16</strong> as the Audio Controller
+in VirtualBox, you can listen to that nostalgic Sun [cowbell](/usr/demo/SOUNDS/sounds/cowbell.au) sound once again.
 But you'll be missing many tools that are taken for granted in a modern Linux system, for example:
 * a C compiler (Solaris 8 does <strong>not</strong> ship with a C compiler),
 * the ssh suite (the pseudo-devices <code>/dev/random</code> and <code>/dev/urandom</code> do not exist), and of course
 * the lack of any of the <i>modern</i> tools, e.g. <strong>openssl</strong>, <strong>openssh</strong>,
-and <strong>gnu</strong> tools are a notable exceptions.
+and <strong>gnu</strong> tools are a notable examples.
 
 Sadly http://sunsolve.sun.com [sic] no longer exists, and finding patches can be difficult.
 While it's nicest to apply all of the recommended patches, the most important patch is <strong>112439-02</strong>
@@ -82,6 +85,14 @@ which provides the pseudo-devices <code>/dev/random</code> and <code>/dev/urando
 It's best if you're able to find the
 [Solaris 8 recommended patch cluster](http://ftp.lanet.lv/ftp/unix/sun-info/sun-patches/8_Recommended.zip) (which includes 112439-02)
 and install the cluster for best results.
+
+### Pre-compiled Solaris 8_x86 Binaries
+This is really a deal breaker for a usable system if you're unable to find any prebuilt packages.<br>
+Fortunately, [tgcware](http://jupiterrise.com/tgcware/)
+is there to the [rescue](http://jupiterrise.com/tgcware/sunos5.8_x86/stable/)!
+I can't stress enough what a tremendous help and time-saver this was.
+There's a good selection of tools assembled (with various versions of some of the tools) and
+each package that was built is listed with its name, brief description, and its <code>md5sum</code> checksum.
 
 Some Markdown text with <span style="color:blue">some *blue* text</span>.
 testing ...
