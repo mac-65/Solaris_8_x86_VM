@@ -105,16 +105,17 @@ your particular enviornment or needs.  The scripts are named as <code>001-gzip.s
 so that <code>ls 0\*.sh</code> will list all of the scripts.
 <br>
 Get all of the software and packages.
-#### 1. Download the ISOs.
+#### 1. Download the ISOs
  * Use your browser or use <code>wget</code> to get the ISOs, e.g.<br>
 <code>wget -c https://archive.org/download/sol-8-u7-ia/sol-8-u7-ia-v1.iso</code>
 
-#### 2. Download the Solaris 8 x86 Recommended Patch Cluster.
-#### 3. Download the tgcware packages that are used by the install scripts.
+#### 2. Download the Solaris 8 x86 Recommended Patch Cluster
+#### 3. Download the <code>tgcware</code> Packages
 All of the packages from [tgcware](http://jupiterrise.com/tgcware/sunos5.8_x86/stable/) are <code>.gz</code> files
 <i>except</i> for the [gzip](http://jupiterrise.com/tgcware/sunos5.8_x86/stable/gzip-1.6-1.tgc-sunos5.8-i386-tgcware) package
 (for obvious reasons).  I decided, after a few install iterations, the easiest thing to do was to 
-create an ISO image containing all of the packages and scripts used to build the system.
+create an ISO image containing all of the packages and scripts used to build the system.<br>
+* Run the script <code>get_tgcware.sh -h</code> for usage instructions.
 
 Some Markdown text with <span style="color:blue">some *blue* text</span>.
 testing ...
