@@ -1,4 +1,4 @@
-# Steps For Installing Solaris 8 x86 on VirtualBox
+# Steps For Installing Solaris 8 x86 in VirtualBox
 
 This (hobby) project list the steps that I've used to build a Solaris 8 x86 virtual machine in VirtualBox.
 These steps were built from a number of sources that I used to guide me through the process.
@@ -79,12 +79,12 @@ But you'll be missing many tools that are taken for granted in a modern Linux sy
 * the lack of any of the <i>modern</i> tools, e.g. <strong>openssl</strong>, <strong>openssh</strong>,
 and <strong>gnu</strong> tools are a notable examples.
 
-### Solaris 8 x86 Recommended Patch Cluster
+### Solaris 8 x86 Recommended Patch Cluster  FIXME FIXME FIXME
 Sadly http://sunsolve.sun.com [sic] no longer exists, and finding patches can be difficult.
 While it's nicest to apply all of the recommended patches, the most important patch is <strong>112439-02</strong>
 which provides the pseudo-devices <code>/dev/random</code> and <code>/dev/urandom</code>.
 It's best if you're able to find the
-[Solaris 8 recommended patch cluster](http://ftp.lanet.lv/ftp/unix/sun-info/sun-patches/8_Recommended.zip) (which includes 112439-02)
+[Solaris 8 recommended patch cluster](http://ftp.lanet.lv/ftp/unix/sun-info/sun-patches/8_x86_Recommended.zip) (which includes 112439-02)
 and install the cluster for best results.
 
 ### Pre-compiled Solaris 8_x86 Binaries

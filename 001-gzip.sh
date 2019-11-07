@@ -117,6 +117,7 @@ if [ ! -f "${PKGADD_ADMIN}" ] ; then
 fi
 
 ###############################################################################
+###############################################################################
 #
 printf '%s? ' "${ATTR_BOLD}INSTALL${ATTR_OFF}: gzip, bzip2, bash, and vim" ;
 read ANS ;
@@ -174,8 +175,11 @@ if [ "${ANS}" = 'y' ] ; then
     chgrp -R root /root ;
 
     ###########################################################################
+    ###########################################################################
     # Simple section to add a single user.
     # NOTE, the error checking is not very robust...
+    #
+    # As part of the new user, we'll add the file '${HOME}/.solregis/disable'.
     #
     { set +x ; } >/dev/null 2>&1 ; # Sun's old /bin/sh won't work with {}s
     printf '%s? ' "${ATTR_BOLD}ADD NEW USER${ATTR_OFF}" ; read ANS ;
@@ -247,6 +251,8 @@ if [ "${ANS}" = 'y' ] ; then
         chown -R "${USER_NAME}" "/export/home/${USER_NAME}" ;
         chgrp -R "${USER_NAME}" "/export/home/${USER_NAME}" ;
         chmod -R u+rwx,go-rwx   "/export/home/${USER_NAME}" ;
+
+        touch "/export/home/${USER_NAME}/.solregis/disable" ;
 
         { set +x ; } >/dev/null 2>&1 ;
         passwd "${USER_NAME}" ;
