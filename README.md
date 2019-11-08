@@ -52,6 +52,7 @@ There might be a way, but I haven't tried it and this version runs all of my VMs
 (although the creature comforts added in later versions are nice, but the VMs
 don't work).
 
+
 ### Solaris 8 x86
 * The Solaris 8 x86 ISOs are available on [archive.org](https://archive.org/download/sol-8-u7-ia).<br><br>
 ![sample](./images/Solaris_8-availability.png)<br>
@@ -64,7 +65,7 @@ You should download all of the Solaris 8 x86 ISO images:<br>
 | <code>sol-8-u7-lang-ia.iso</code>    | <code>6164e7e2d24f2291689f2b1f82fccc0b</code> | Optional languages image |
 | <code>sol-8-u7-install-ia.iso</code> | <code>91029b86d9eb130a73d83e7a67a817df</code> | This ISO image is<br>not used in these steps. |
 
-* These ISOs will build a Solaris installation with the following characteristics
+* These ISOs can build a Solaris installation with the following characteristics
 after all of the steps have been performed in this guide (from <code>/etc/release</code>):<br><br>
 ![Solaris 8 2/02 s28x_u7wos_08a INTEL](./images/Solaris-8-x86-Desktop.png)<br>
 
@@ -79,13 +80,22 @@ But you'll be missing many tools that are taken for granted in a modern Linux sy
 * the lack of any of the <i>modern</i> tools, e.g. <strong>openssl</strong>, <strong>openssh</strong>,
 and <strong>gnu</strong> tools are a notable examples.
 
-### Solaris 8 x86 Recommended Patch Cluster  FIXME FIXME FIXME
+
+### Solaris 8 x86 Recommended Patch Cluster(s) & 112439-02
 Sadly http://sunsolve.sun.com [sic] no longer exists, and finding patches can be difficult.
 While it's nicest to apply all of the recommended patches, the most important patch is <strong>112439-02</strong>
 which provides the pseudo-devices <code>/dev/random</code> and <code>/dev/urandom</code>.
+
 It's best if you're able to find the
-[Solaris 8 recommended patch cluster](http://ftp.lanet.lv/ftp/unix/sun-info/sun-patches/8_x86_Recommended.zip) (which includes 112439-02)
+[Solaris 8 x86 recommended patch cluster](http://ftp.lanet.lv/ftp/unix/sun-info/sun-patches/8_x86_Recommended.zip)
 and install the cluster for best results.
+
+Next, either find and install the patch
+[112439-02](http://ftp.lanet.lv/ftp/unix/sun-info/sun-patches/112439-02.zip).
+That patch is also included in the
+[J2SE Solaris 8 x86 recommended patch cluster](http://ftp.lanet.lv/ftp/unix/sun-info/sun-patches/J2SE_Solaris_8_x86_Recommended.zip)
+if you want to install that cluster in addition to the regular recommended patch cluster.
+
 
 ### Pre-compiled Solaris 8_x86 Binaries
 This is really a deal breaker for a usable system if you're unable to find any prebuilt packages.<br>
@@ -97,25 +107,56 @@ each package that was prebuilt is listed with its name, brief description, and i
 <br>
 This guide includes a simple script for getting the prebuilt binaries from [tgcware](http://jupiterrise.com/tgcware/sunos5.8_x86/stable/).
 
+
 # Getting Started
 This guide includes some package install scripts to help smooth the process
 and perform some task that are minor enhancements or missing in the original.
 It is recommended that you review each script and make any changes suited to
-your particular enviornment or needs.  The scripts are named as <code>001-gzip.sh</code>, etc.,
+your particular environment or needs.  The scripts are named as <code>001-gzip.sh</code>, etc.,
 so that <code>ls 0\*.sh</code> will list all of the scripts.
-<br>
-Get all of the software and packages.
-#### 1. Download the ISOs
- * Use your browser or use <code>wget</code> to get the ISOs, e.g.<br>
-<code>wget -c https://archive.org/download/sol-8-u7-ia/sol-8-u7-ia-v1.iso</code>
 
-#### 2. Download the Solaris 8 x86 Recommended Patch Cluster
+
+#### 1. Download the ISOs
+Use your browser or use <code>wget</code> to get the ISOs, e.g.<br>
+* <code>wget -c https://archive.org/download/sol-8-u7-ia/sol-8-u7-ia-v1.iso</code>
+
+#### 2. Download the Solaris 8 x86 Recommended Patch Cluster(s)
+After you have downloaded the necessary
+[cluster patch](http://ftp.lanet.lv/ftp/unix/sun-info/sun-patches/8_x86_Recommended.zip)
+and [112439-02](http://ftp.lanet.lv/ftp/unix/sun-info/sun-patches/112439-02.zip),
+make a copy of the files
+and uncompress all of the files.
+<br>It will make the process easier and
+the install scripts provided here, assume that the packages are uncompressed.
+
 #### 3. Download the <code>tgcware</code> Packages
+This guide provides a simple installation script for acquiring the pre-built packages
+from [tgcware](http://jupiterrise.com/tgcware/sunos5.8_x86/stable/).
+* Run the script <code>get_tgcware.sh -h</code> for usage instructions.
+
+The packages selected are meant as a starting point to build the
+Solaris 8 x86 box with a sane configuration: e.g. bash, vim, gcc, and openssl/openssh suite
+are installed with some other basic tools.
+<br>But, please feel free to change anything to your specific requirements/tastes.
+
 All of the packages from [tgcware](http://jupiterrise.com/tgcware/sunos5.8_x86/stable/) are <code>.gz</code> files
 <i>except</i> for the [gzip](http://jupiterrise.com/tgcware/sunos5.8_x86/stable/gzip-1.6-1.tgc-sunos5.8-i386-tgcware) package
-(for obvious reasons).  I decided, after a few install iterations, the easiest thing to do was to 
-create an ISO image containing all of the packages and scripts used to build the system.<br>
-* Run the script <code>get_tgcware.sh -h</code> for usage instructions.
+(for obvious reasons).
+<br>Like with the patch files, copy and uncompress all of the pre-built software files.
+
+#### 4. Review the <code>bashrc</code> and <code>vimrc</code> . File Templates and <code>0\*.sh</code> Scripts
+I've include some of my simple shell and vim hacks to get things started.
+<br>Put a copy of those files in the same location as all of the other files and
+the <code>0\*.sh</code> scripts as well.
+
+#### 5. Building the "tools" CD
+I decided, after a few install iterations, the easiest thing to do was to 
+create a CD ISO image containing all of the packages and scripts used to build the system.
+I emphasize a CD volume because I'm not sure if Solaris 8 "knows" about DVD file systems;
+if it can, then use whatever format you want (although most burners will select the
+format automatically based on the size of the image to create).
+Note, <i>you don't actually burn a CD</i>, just use whatever software to create a CD image file
+that can be mounted in VirtualBox.  I used <strong>K3b</strong>.
 
 Some Markdown text with <span style="color:blue">some *blue* text</span>.
 testing ...
