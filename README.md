@@ -1,12 +1,16 @@
-# Steps For Installing Solaris 8 x86 in VirtualBox
+# ![Installation Guide For Solaris 8 x86 In VirtualBox](./svgs/mainTitle.svg)
 
 This (hobby) project list the steps that I've used to build a Solaris 8 x86 virtual machine in VirtualBox.
 These steps were built from a number of sources that I used to guide me through the process.
 
-I've spent many years working in the Sun architecture, from the
-[SPARCstation 1](https://en.wikipedia.org/wiki/SPARCstation_1)
-through the [Sun Ultras](https://en.wikipedia.org/wiki/Sun_Ultra_series)
-they were my first real taste of Unix and 32-bit computing.
+I've spent many years developing software in the Sun SPARC architecture,
+first on the [SPARCstation 1](https://en.wikipedia.org/wiki/SPARCstation_1) (Sun 4/60)
+up through the [Sun Ultra](https://en.wikipedia.org/wiki/Sun_Ultra_series) 1 and 2.
+Those Sun systems were my first real taste of Unix and 32-bit computing.
+I remember that a [SPARCstation IPX](https://en.wikipedia.org/wiki/SPARCstation_IPX) was
+not fast enough to decode mp3 files and 1152x900 8-bit color was state-of-the-art graphics
+(yes there were 24-bit cards available, but they were expensive and very slow and not
+all of the software supported the 24 bit visuals).
 
 
 Once in a while, I need to do something in this olde OS, and
@@ -124,10 +128,8 @@ Use your browser or use <code>wget</code> to get the ISOs, e.g.<br>
 After you have downloaded the necessary
 [cluster patch](http://ftp.lanet.lv/ftp/unix/sun-info/sun-patches/8_x86_Recommended.zip)
 and [112439-02](http://ftp.lanet.lv/ftp/unix/sun-info/sun-patches/112439-02.zip),
-make a copy of the files
-and uncompress all of the files.
-<br>It will make the process easier and
-the install scripts provided here, assume that the packages are uncompressed.
+make a copy of the files and uncompress all of the files.
+It will make the process easier and the install scripts provided assume that the packages are uncompressed.
 
 #### 3. Download the <code>tgcware</code> Packages
 This guide provides a simple installation script for acquiring the pre-built packages

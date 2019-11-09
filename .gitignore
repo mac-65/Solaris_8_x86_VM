@@ -7,3 +7,5 @@ git-local
 make-github.sh
 make-local.sh
 WS
+svgs/original.svg
+svgs/save.svg

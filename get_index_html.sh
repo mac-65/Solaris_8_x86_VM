@@ -17,6 +17,8 @@ MODULO_VAL=0 ; # a modulo, if greater than 1, to add to WAIT_TIME
 FUZZY_VAL=0 ;
 BUILD_LIST_ONLY=0 ;
 
+REGX_SUFFIX_LIST='[.]bz2"|[.]md5"|[.]zip"|[.]gz"|[.]tgz"|[.]rar"' ;
+
 ###############################################################################
 # Nothing fancy...
 usage () {
@@ -38,9 +40,13 @@ Get all of the files that are at the location specified by the URL.
 The files that are retrieved are file that have the following suffixes:
     `tput bold`.bz2   .md5   .zip   .gz   .tgz   .rar`tput sgr0`
 
+ +suffix     add an additional suffix to the search list, can be specified
+             multiple times as needed.  Note, `tput smul`the '.' is added by the script.`tput rmul`
+
  -q          show the wget commands that will be build against the index file
  -B          build the wget files list (get index.html if needed) and exit.
- -t seconds  minimum # of seconds to wait between each wget, `tput smso`default = ${WAIT_TIME}`tput rmso`
+ -t seconds  minimum # of seconds to wait between each wget, `tput smul`default = ${WAIT_TIME}`tput rmul`
+             a value of zero disable the wait between each wget
  -r int > 1  adds a random value modulo this integer to the -t option
  -reckless   assume if the file's there and its timestamp is less than the
              timestamp of 'index.html', then it's "already fully retrieved"
@@ -82,10 +88,15 @@ while [ $# -ne 0 ] ; do
        --limit-rate=[1-9]*)
           LIMIT_RATE="${ARG}" ;
         ;;
-       -h*) usage ; ;;
-       -q) SHOW_CMDS='echo' ; ;;
-       -reckless) RECKLESS=1 ; ;;
-       -B) BUILD_LIST_ONLY=1 ; ;;
+       -q)
+          SHOW_CMDS='echo' ;
+        ;;
+       -reckless)
+          RECKLESS=1 ;
+        ;;
+       -B)
+          BUILD_LIST_ONLY=1 ;
+        ;;
        http*)
           if [ "${BASE_URL}" != '' ] ; then
              usage 'URL was already specified' ;
@@ -107,14 +118,23 @@ while [ $# -ne 0 ] ; do
           [ $# -eq 0 ] && usage '-t requires the number of seconds to sleep' ;
 
           ARG="$1" ; shift ;
-          if [ "${ARG}" -eq "${ARG}" -a "${ARG}" -gt 0 ] 2>/dev/null
+          if [ "${ARG}" -eq "${ARG}" -a "${ARG}" -ge 0 ] 2>/dev/null
           then
              WAIT_TIME="${ARG}" ;
           else
              usage "'${ARG}' format, -t requires a non-ZERO positive integer" ;
           fi
         ;;
-       *) usage "invalid/unknown arg, '${ARG}'"; ;;
+       +*)
+          SUFFIX="${ARG}" ; # We don't care about differences between byte and char lengths.
+          SUFFIX_LEN=${#SUFFIX} ;
+          [ $SUFFIX_LEN -lt 2 ] && usage "'+' needs one or more characters as a suffix identifier" ;
+          REGX_SUFFIX_LIST="${REGX_SUFFIX_LIST}|[.]${SUFFIX:1}\"" ;
+        ;;
+       -h*) usage ;
+        ;;
+       *) usage "invalid/unknown arg, '${ARG}'";
+        ;;
     esac
 done
 
@@ -151,10 +171,10 @@ if [ ! -f "${INDEX}" ] ; then
 fi
 
 if [ ! -f "${WGET_FILES}" ] ; then
-    cat "${INDEX}"                                                \
-        | egrep '[.]bz2"|[.]md5"|[.]zip"|[.]gz"|[.]tgz"|[.]rar"'  \
-        | grep -ho 'href="[^"]*"'                                 \
-        | sed -e 's/href="//' -e 's/"//'                          \
+    cat "${INDEX}"                        \
+        | egrep "${REGX_SUFFIX_LIST}"     \
+        | grep -ho 'href="[^"]*"'         \
+        | sed -e 's/href="//' -e 's/"//'  \
     > "${WGET_FILES}" ;
 fi
 
@@ -209,7 +229,7 @@ if [ -f "${INDEX}" ] ; then
 
         [ ${PKG_IDX} -eq ${PKG_CNT} ] && break ;
 
-        if [ ${NO_WAIT_FLAG} -eq 0 -a "${SHOW_CMDS}" = '' ] ; then
+        if [ ${WAIT_TIME} -gt 0 -a ${NO_WAIT_FLAG} -eq 0 -a "${SHOW_CMDS}" = '' ] ; then
            # A slightly fancy countdown timer...
            FUZZY_VAL=$MODULO_VAL ;
            [ $MODULO_VAL -ne 0 ] && (( FUZZY_VAL = RANDOM % MODULO_VAL )) ;
