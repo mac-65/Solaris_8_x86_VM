@@ -34,12 +34,12 @@ these steps, TODO
 
 ## Disclaimer
 ![Software is provided "as is" and "with all faults."](./svgs/disclaimer.svg)
-THE PROVIDER makes no representations or warranties of any kind concerning the safety, suitability,
+THE AUTHOR makes no representations or warranties of any kind concerning the safety, suitability,
 lack of viruses, inaccuracies, typographical errors, or other harmful components of this SOFTWARE.
 There are inherent risks and dangers in the use of any software, and you are solely responsible for determining
 whether this SOFTWARE is compatible with your equipment and other software installed on your equipment.
 You are also solely responsible for the protection of your equipment and the backup of your data,
-and THE PROVIDER will not be liable for any damages you may suffer in connection with using,
+and THE AUTHOR will not be liable for any damages you may suffer in connection with using,
 modifying, or distributing this SOFTWARE.<br>
 
 :boom: There are likely <i>many</i> bugs, errors, incomplete and missing features and documentation.

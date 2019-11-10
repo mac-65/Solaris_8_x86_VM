@@ -1,19 +1,15 @@
-<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" width="800" height="26" version="1.1">
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" width="900" height="32" version="1.1">
 /* https://stackoverflow.com/questions/54171371/how-to-apply-a-color-gradient-to-an-svg-image
 */
 <defs>
-    <linearGradient id="MyGradient">
+    <linearGradient id="blueGradient">
         <stop offset="5%" stop-color="#330066" />
         <stop offset="50%" stop-color="#00CCFF" />
         <stop offset="95%" stop-color="#000066" />
     </linearGradient>
     <style>
-    /* NOTE that the color of the text is set with the    *
-        y="45%"
-     * fill property, the color property is for HTML only */
-    .disclaimer { font: 2em "sans-serif"; stroke: #006666; stroke-width:1; fill: url(#MyGradient); }
-    .d2 { font: 24pt "Gamja Flower"; stroke: #006666; stroke-width:1; fill: url(#MyGradient); }
+    .d2 { stroke: #006666; stroke-width:1; fill: url(#blueGradient); }
     </style>
 </defs>
-<text y="98%" class="disclaimer">Installation Guide For Solaris 8 x86 In VirtualBox</text>
+<text y="98%" font-weight="bold" font-family="Arial, Helvetica, sans-serif" font-size="2.1rem" class="d2">Installation Guide For Solaris 8 x86 In VirtualBox</text>
 </svg>
