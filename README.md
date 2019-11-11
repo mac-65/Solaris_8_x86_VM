@@ -25,8 +25,13 @@ The process took longer than I expected
 but after getting things to actually work was pretty satisfying and fun.
 
 #### Not Covered In This Guide
-Graphic support beyond CGA.  Looks like it's possible (and may be non-trivial),
-just haven't looked into it yet.
+* <strong>Graphic beyond SVGA</strong> (800×600 4-bit color depth)<br>
+Looks like it may be possible (and may be non-trivial).<br>
+I just haven't looked into it yet; probably ties in with Guest Additions.
+<!-- https://docs.oracle.com/cd/E97728_01/F12469/html/adv-config-linux-guest.html -->
+* <strong>Guest Additions:</strong><br>
+Shared clipboard, drag and drop, seamless mode, shared folders from host system, and theoretically better graphics<br>
+I haven't looked into it at all.
 
 #### Acknowledgements and Attribution
 I searched many dozens of sites for answers, the major sites are listed in
@@ -35,12 +40,12 @@ these steps, TODO
 ## Disclaimer
 ![Software is provided "as is" and "with all faults."](./svgs/disclaimer.svg)
 THE AUTHOR makes no representations or warranties of any kind concerning the safety, suitability,
-lack of viruses, inaccuracies, typographical errors, or other harmful components of this SOFTWARE.
+lack of viruses, inaccuracies, typographical errors, or other harmful components of SOFTWARE in this guide.
 There are inherent risks and dangers in the use of any software, and you are solely responsible for determining
-whether this SOFTWARE is compatible with your equipment and other software installed on your equipment.
+whether this SOFTWARE in this guide is compatible with your equipment and other software installed on your equipment.
 You are also solely responsible for the protection of your equipment and the backup of your data,
 and THE AUTHOR will not be liable for any damages you may suffer in connection with using,
-modifying, or distributing this SOFTWARE.<br>
+modifying, or distributing this SOFTWARE in this guide.<br>
 
 :boom: There are likely <i>many</i> bugs, errors, incomplete and missing features and documentation.
 
@@ -156,10 +161,42 @@ I decided, after a few install iterations, the easiest thing to do was to
 create a CD ISO image containing all of the packages and scripts used to build the system.
 I emphasize a CD volume because I'm not sure if Solaris 8 "knows" about DVD file systems;
 if it can, then use whatever format you want (although most burners will select the
-format automatically based on the size of the image to create).
-Note, <i>you don't actually burn a CD</i>, just use whatever software to create a CD image file
+format automatically based on the size of the image to create).<br>
+Note, <i>you don't actually need to burn a CD</i>, just use whatever software to create a CD image file
 that can be mounted in VirtualBox.  I used <strong>K3b</strong>.
+Solaris 8 will automatically detect when the CD is mounted through VirtualBox.
 
-Some Markdown text with <span style="color:blue">some *blue* text</span>.
-testing ...
+
+# VirtualBox
+It's easier to show all of the screenshots of the VirtualBox setting that were used
+with notes as needed to clarify the process.
+Items that are not show are setting that don't affect the outcome (e.g., whether the <strong>Shared Clipboard</strong> is enabled, etc.)
+#### General
+* ![General setting](./images/VirtualBox-0001.png)<br>
+
+#### System
+* ![System settings](./images/VirtualBox-0002.png)<br><br>
+* ![Systen settings](./images/VirtualBox-0003.png)<br><br>
+* ![Systen settings](./images/VirtualBox-0004.png)<br>
+
+#### Display
+* ![System settings](./images/VirtualBox-0005.png)<br>
+
+#### Storage
+* ![System settings](./images/VirtualBox-0006.png)<br>
+
+#### Audio
+* ![System settings](./images/VirtualBox-0007.png)<br>
+
+#### Network
+* ![System settings](./images/VirtualBox-0008.png)<br>
+
+#### Serial Ports
+* No serial ports were configured.
+
+#### USB
+* Enabled -- don't know if this has any effect in Solaris 8.
+
+#### Shared Folders
+* No folders are configured.
 
