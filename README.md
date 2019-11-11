@@ -169,8 +169,9 @@ Solaris 8 will automatically detect when the ISO image is mounted through Virtua
 
 
 # VirtualBox
-[top](#top)
-<a href="#top">Back to top</a>
+[top](#installation-guide-for-solaris-8-x86-in-virtualbox)
+[top](#top)<br>
+<a href="#top">Back to top</a><br>
 It's easier to show all of the screenshots of the VirtualBox setting that were used
 with notes as needed to clarify the process.
 Items that are not show are setting that don't affect the outcome (e.g., whether the <strong>Shared Clipboard</strong> is enabled, etc.)
