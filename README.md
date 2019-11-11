@@ -172,6 +172,11 @@ Solaris 8 will automatically detect when the ISO image is mounted through Virtua
         <div style="float:right;">This text is right Aligned</div>
             </div>
 
+<span style="text-align:left;">
+    This text is left aligned
+        <span style="float:right;">This text is right Aligned</span>
+            </span>
+
 <!-- It's a shame that github strips the style tags,
      have to make dur with a couple of SPACEs for the button -->
 # <span style="text-align:left;">VirtualBox<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
