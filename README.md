@@ -82,9 +82,7 @@ Everything up to this point (and following these steps) will allow you to build 
 Solaris 8 x86 virtual machine.
 Networking should be fine (manual steps are necessary to configure the network).
 If you've selected <strong>SoundBlaster 16</strong> as the Audio Controller in VirtualBox,
-you can listen to that nostalgic Sun
-[cowbell](audio/cowbell.mp3)
-sound
+you can listen to that nostalgic Sun cowbell sound
 (<code>cat /usr/demo/SOUNDS/sounds/cowbell.au > /dev/audio</code>) once again.
 But you'll be missing many tools that are taken for granted in a modern Linux system, for example:
 * a C compiler (Solaris 8 did <strong>not</strong> even ship with the K&R C compiler),
