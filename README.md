@@ -175,10 +175,13 @@ Solaris 8 will automatically detect when the ISO image is mounted through Virtua
             </span>
 
 
-# <span style="text-align:left;">VirtualBox<span style="float:right;">[:top:](#top00)</span></span>
+# <span style="text-align:left;">VirtualBox<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 It's easier to show all of the screenshots of the VirtualBox setting that were used
-with notes as needed to clarify the process.
-Items that are not show are setting that don't affect the outcome (e.g., whether the <strong>Shared Clipboard</strong> is enabled, etc.)
+with notes as needed to clarify the process.<br>
+After building the new machine (setting its name, memory, and hard drive), use these
+screen shots to perform the final setting that are needed.<br>
+Items that are not show are settings that don't affect the outcome
+(e.g., whether the <strong>Shared Clipboard</strong> is enabled, etc.)
 #### General
 * ![General setting](./images/VirtualBox-0001.png)<br>
 
