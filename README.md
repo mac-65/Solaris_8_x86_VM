@@ -82,7 +82,10 @@ Everything up to this point (and following these steps) will allow you to build 
 Solaris 8 x86 virtual machine.
 Networking should be fine (manual steps are necessary to configure the network).
 If you've selected <strong>SoundBlaster 16</strong> as the Audio Controller in VirtualBox,
-you can listen to that nostalgic Sun cowbell sound (<code>cat /usr/demo/SOUNDS/sounds/cowbell.au > /dev/audio</code>) once again.
+you can listen to that nostalgic Sun
+[cowbell](audio/cowbell.mp3)
+sound
+(<code>cat /usr/demo/SOUNDS/sounds/cowbell.au > /dev/audio</code>) once again.
 But you'll be missing many tools that are taken for granted in a modern Linux system, for example:
 * a C compiler (Solaris 8 did <strong>not</strong> even ship with the K&R C compiler),
 * the ssh suite (the pseudo-devices <code>/dev/random</code> and <code>/dev/urandom</code> do not exist), and of course
@@ -164,7 +167,7 @@ if it can, then use whatever format you want (although most burners will select 
 format automatically based on the size of the image to create).<br>
 Note, <i>you don't actually need to burn a CD</i>, just use whatever software to create a CD image file
 that can be mounted in VirtualBox.  I used <strong>K3b</strong>.
-Solaris 8 will automatically detect when the CD is mounted through VirtualBox.
+Solaris 8 will automatically detect when the ISO image is mounted through VirtualBox.
 
 
 # VirtualBox
@@ -180,16 +183,16 @@ Items that are not show are setting that don't affect the outcome (e.g., whether
 * ![Systen settings](./images/VirtualBox-0004.png)<br>
 
 #### Display
-* ![System settings](./images/VirtualBox-0005.png)<br>
+* ![Display settings](./images/VirtualBox-0005.png)<br>
 
 #### Storage
-* ![System settings](./images/VirtualBox-0006.png)<br>
+* ![Storage settings](./images/VirtualBox-0006.png)<br>
 
 #### Audio
-* ![System settings](./images/VirtualBox-0007.png)<br>
+* ![Audio settings](./images/VirtualBox-0007.png)<br>
 
 #### Network
-* ![System settings](./images/VirtualBox-0008.png)<br>
+* ![Network settings](./images/VirtualBox-0008.png)<br>
 
 #### Serial Ports
 * No serial ports were configured.
