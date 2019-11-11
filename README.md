@@ -1,3 +1,4 @@
+<a name="chapter4"></a> 
 # ![Guide](./svgs/mainTitle.svg)
 # Test ing
 
@@ -170,7 +171,7 @@ Solaris 8 will automatically detect when the ISO image is mounted through Virtua
 
 
 # VirtualBox
-[up](#guide)<br>
+[up](#chapter4)<br>
 [:top:](#test-ing)<br>
 [up](#test-ing)<br>
 [top](#top)<br>
