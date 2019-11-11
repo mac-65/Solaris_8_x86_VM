@@ -1,5 +1,4 @@
-<a name="top00"></a> 
-# ![Guide](./svgs/mainTitle.svg)
+<a name="top00"></a>![Guide](./svgs/mainTitle.svg)
 
 This (hobby) project list the steps that I've used to build a Solaris 8 x86 virtual machine in VirtualBox.
 These steps were built from a number of sources that I used to guide me through the process.
@@ -168,13 +167,13 @@ Note, <i>you don't actually need to burn a CD</i>, just use whatever software to
 that can be mounted in VirtualBox.  I used <strong>K3b</strong>.
 Solaris 8 will automatically detect when the ISO image is mounted through VirtualBox.
 
-
-<span style="text-align:left;">
+<div style="text-align:left;">
     This text is left aligned
-        <span style="float:right;">This text is right Aligned</span>
-            </span>
+        <div style="float:right;">This text is right Aligned</div>
+            </div>
 
-
+<!-- It's a shame that github strips the style tags,
+     have to make dur with a couple of SPACEs for the button -->
 # <span style="text-align:left;">VirtualBox<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 It's easier to show all of the screenshots of the VirtualBox setting that were used
 with notes as needed to clarify the process.<br>
