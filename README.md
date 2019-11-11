@@ -167,18 +167,9 @@ Note, <i>you don't actually need to burn a CD</i>, just use whatever software to
 that can be mounted in VirtualBox.  I used <strong>K3b</strong>.
 Solaris 8 will automatically detect when the ISO image is mounted through VirtualBox.
 
-<div style="text-align:left;">
-    This text is left aligned
-        <div style="float:right;">This text is right Aligned</div>
-            </div>
-
-<span style="text-align:left;">
-    This text is left aligned
-        <span style="float:right;">This text is right Aligned</span>
-            </span>
 
 <!-- It's a shame that github strips the style tags,
-     have to make dur with a couple of SPACEs for the button -->
+     have to make due with a few SPACEs before the button -->
 # <span style="text-align:left;">VirtualBox<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 It's easier to show all of the screenshots of the VirtualBox setting that were used
 with notes as needed to clarify the process.<br>
@@ -186,14 +177,20 @@ After building the new machine (setting its name, memory, and hard drive), use t
 screen shots to perform the final setting that are needed.<br>
 Items that are not show are settings that don't affect the outcome
 (e.g., whether the <strong>Shared Clipboard</strong> is enabled, etc.)
+
 #### General
 * ![General setting](./images/VirtualBox-0001.png)<br>
+Ensure the 32-bit version is selected.
 
 #### System
 * ![System settings](./images/VirtualBox-0002.png)<br>
 2 gigabytes is pretty generous for these old architectures... <br>
 
 * ![Systen settings](./images/VirtualBox-0003.png)<br>
+I configured a 2 CPU system.  I'm not sure how many CPU Solaris 8 x86 supports.<br>
+I believe based on [What's New in Solaris 8 Operating Environment](http://www.ing.iac.es/~cfg/pub_notes/solaris/solaris%208%20whatsnew.pdf),
+PAE is available<br>
+if you want to go above a 4 gigabyte memory configuration.
 
 * ![Systen settings](./images/VirtualBox-0004.png)<br>
 
@@ -204,12 +201,17 @@ I don't know if <strong>Enable 3D Acceleration</strong> actually helps (doesn't 
 
 #### Storage
 * ![Storage settings](./images/VirtualBox-0006.png)<br>
+Install the Solaris 8 media <strong>sol-8-u7-ia-v1.iso</strong>, this is the boot media.
 
 #### Audio
 * ![Audio settings](./images/VirtualBox-0007.png)<br>
 
 #### Network
 * ![Network settings](./images/VirtualBox-0008.png)<br>
+Ensure that the adapter type is set <strong>PCnet-PCI II (Am79C970A)</strong> (others may work, I haven't tried).<br>
+Multiple adaapters should work, but the network will require a different configuration
+(I believe)
+<br>and this guide does not cover those steps.
 
 #### Serial Ports
 * No serial ports were configured.
