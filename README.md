@@ -1,4 +1,4 @@
-# ![Installation Guide For Solaris 8 x86 In VirtualBox](./svgs/mainTitle.svg)
+# ![Guide](./svgs/mainTitle.svg)
 # Test ing
 
 This (hobby) project list the steps that I've used to build a Solaris 8 x86 virtual machine in VirtualBox.
@@ -170,7 +170,8 @@ Solaris 8 will automatically detect when the ISO image is mounted through Virtua
 
 
 # VirtualBox
-[up](#installation-guide-for-solaris-8-x86-in-virtualbox)<br>
+[up](#guide)<br>
+[:top:](#test-ing)<br>
 [up](#test-ing)<br>
 [top](#top)<br>
 <a href="#top">Back to top</a><br>
