@@ -169,6 +169,8 @@ Solaris 8 will automatically detect when the ISO image is mounted through Virtua
 
 
 # VirtualBox
+[top](#top)
+<a href="#top">Back to top</a>
 It's easier to show all of the screenshots of the VirtualBox setting that were used
 with notes as needed to clarify the process.
 Items that are not show are setting that don't affect the outcome (e.g., whether the <strong>Shared Clipboard</strong> is enabled, etc.)
@@ -176,12 +178,15 @@ Items that are not show are setting that don't affect the outcome (e.g., whether
 * ![General setting](./images/VirtualBox-0001.png)<br>
 
 #### System
-* ![System settings](./images/VirtualBox-0002.png)<br><br>
+* ![System settings](./images/VirtualBox-0002.png)<br>
+2 gigabytes is pretty generous for these old architectures...
+<br>
 * ![Systen settings](./images/VirtualBox-0003.png)<br><br>
 * ![Systen settings](./images/VirtualBox-0004.png)<br>
 
 #### Display
 * ![Display settings](./images/VirtualBox-0005.png)<br>
+I don't know if <strong>Enable 3D Acceleration</strong> actually helps (doesn't hurt, though).
 
 #### Storage
 * ![Storage settings](./images/VirtualBox-0006.png)<br>
