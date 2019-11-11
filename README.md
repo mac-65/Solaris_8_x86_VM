@@ -1,6 +1,5 @@
-<a name="chapter4"></a> 
+<a name="top00"></a> 
 # ![Guide](./svgs/mainTitle.svg)
-# Test ing
 
 This (hobby) project list the steps that I've used to build a Solaris 8 x86 virtual machine in VirtualBox.
 These steps were built from a number of sources that I used to guide me through the process.
@@ -170,12 +169,8 @@ that can be mounted in VirtualBox.  I used <strong>K3b</strong>.
 Solaris 8 will automatically detect when the ISO image is mounted through VirtualBox.
 
 
-# VirtualBox
-[up](#chapter4)<br>
-[:top:](#test-ing)<br>
-[up](#test-ing)<br>
-[top](#top)<br>
-<a href="#top">Back to top</a><br>
+# VirtualBox [:top:](#top00)
+[:top:](#top00)<br>
 It's easier to show all of the screenshots of the VirtualBox setting that were used
 with notes as needed to clarify the process.
 Items that are not show are setting that don't affect the outcome (e.g., whether the <strong>Shared Clipboard</strong> is enabled, etc.)
