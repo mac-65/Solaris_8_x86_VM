@@ -169,8 +169,13 @@ that can be mounted in VirtualBox.  I used <strong>K3b</strong>.
 Solaris 8 will automatically detect when the ISO image is mounted through VirtualBox.
 
 
-# VirtualBox [:top:](#top00)
-[:top:](#top00)<br>
+<span style="text-align:left;">
+    This text is left aligned
+        <span style="float:right;">This text is right Aligned</span>
+            </span>
+
+
+# <span style="text-align:left;">VirtualBox<span style="float:right;">[:top:](#top00)</span></span>
 It's easier to show all of the screenshots of the VirtualBox setting that were used
 with notes as needed to clarify the process.
 Items that are not show are setting that don't affect the outcome (e.g., whether the <strong>Shared Clipboard</strong> is enabled, etc.)
