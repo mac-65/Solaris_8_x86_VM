@@ -184,10 +184,12 @@ Items that are not show are setting that don't affect the outcome (e.g., whether
 
 #### System
 * ![System settings](./images/VirtualBox-0002.png)<br>
-2 gigabytes is pretty generous for these old architectures...
-<br>
-* ![Systen settings](./images/VirtualBox-0003.png)<br><br>
+2 gigabytes is pretty generous for these old architectures... <br>
+
+* ![Systen settings](./images/VirtualBox-0003.png)<br>
+
 * ![Systen settings](./images/VirtualBox-0004.png)<br>
+
 
 #### Display
 * ![Display settings](./images/VirtualBox-0005.png)<br>
