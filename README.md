@@ -48,7 +48,7 @@ I haven't looked into it at all.
 I searched many dozens of sites for answers, the major sites are listed in
 these steps, TODO
 
-## Disclaimer
+## <span style="text-align:left;">Disclaimer<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 ![Software is provided "as is" and "with all faults."](./svgs/disclaimer.svg)
 THE AUTHOR makes no representations or warranties of any kind concerning the safety, suitability,
 lack of viruses, inaccuracies, typographical errors, or other harmful components of SOFTWARE in this guide.
@@ -60,7 +60,7 @@ modifying, or distributing this SOFTWARE in this guide.<br>
 
 :boom: There are likely <i>many</i> bugs, errors, incomplete and missing features and documentation.
 
-# System Requirements
+# <span style="text-align:left;">System Requirements<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 
 ### RPMFusion VirtualBox
 
@@ -129,7 +129,7 @@ each package that was prebuilt is listed with its name, brief description, and i
 This guide includes a simple script for getting the prebuilt binaries from [tgcware](http://jupiterrise.com/tgcware/sunos5.8_x86/stable/).
 
 
-# Getting Started
+# <span style="text-align:left;">Getting Started<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 This guide includes some package install scripts to help smooth the process
 and perform some task that are minor enhancements or missing in the original.
 It is recommended that you review each script and make any changes suited to
