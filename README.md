@@ -3,6 +3,11 @@
 This (hobby) project list the steps that I've used to build a Solaris 8 x86 virtual machine in VirtualBox.
 These steps were built from a number of sources that I used to guide me through the process.
 
+# Contents
+* [Introduction](#introduction)
+* [Disclaimer](#disclaimer)
+
+## Introduction
 I've spent many years developing software in the Sun SPARC architecture,
 first on the [SPARCstation 1](https://en.wikipedia.org/wiki/SPARCstation_1) (Sun 4/60)
 up through the [Sun Ultra](https://en.wikipedia.org/wiki/Sun_Ultra_series) 1 and 2.
@@ -53,8 +58,8 @@ modifying, or distributing this SOFTWARE in this guide.<br>
 
 ### VirtualBox
 
-* The VirtualBox version is <code>4.3.32-1</code> (rpmfusion-free on <code>Fedora 21 x86_64, 4.1.13-100.fc21.x86_64</code>).
-<br>I've had later versions of VirtualBox crash and burn with some VMs I've built in the past.
+* The VirtualBox version is <code>4.3.32-1</code> (rpmfusion-free on <code>Fedora 21 x86_64, 4.1.13-100.fc21.x86_64</code>).<br>
+I've had later versions of VirtualBox crash and burn with some VMs I've built in the past.
 It's a problem because as far as I know, it's not possible to <strong>easily</strong> have multiple versions of VirtualBox
 installed on the same machine (like you can do with the gcc compiler collection, e.g.).
 There might be a way, but I haven't tried it and this version runs all of my VMs fine
