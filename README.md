@@ -6,6 +6,7 @@ These steps were built from a number of sources that I used to guide me through 
 # Contents
 * [Introduction](#introduction)
 * [Disclaimer](#disclaimer)
+* [System Requirements](#system-requirements)
 
 ## Introduction
 I've spent many years developing software in the Sun SPARC architecture,
