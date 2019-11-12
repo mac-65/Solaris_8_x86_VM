@@ -1,5 +1,4 @@
 <a name="top00"></a>![Guide](./svgs/mainTitle.svg)
-
 This (hobby) project list the steps that I've used to build a Solaris 8 x86 virtual machine in VirtualBox.
 These steps were built from a number of sources that I used to guide me through the process.
 
@@ -8,7 +7,7 @@ These steps were built from a number of sources that I used to guide me through 
 * [Disclaimer](#disclaimer)
 * [System Requirements](#system-requirements)
 * [Getting Started](#getting-started)
-* [VirtualBox](#virtualBox)
+* [VirtualBox](#mark00)
 
 ## Introduction
 I've spent many years developing software in the Sun SPARC architecture,
@@ -178,6 +177,7 @@ Solaris 8 will automatically detect when the ISO image is mounted through Virtua
 
 <!-- It's a shame that github strips the style tags,
      have to make due with a few SPACEs before the button -->
+<a name="mark00"></a>
 # <span style="text-align:left;">VirtualBox<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 It's easier to show all of the screenshots of the VirtualBox setting that were used
 with notes as needed to clarify the process.<br>
