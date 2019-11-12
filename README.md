@@ -1,6 +1,8 @@
-<a name="top00"></a>![Guide](./svgs/mainTitle.svg)
+<a name="top00"></a>![Guide](./svgs/mainTitle.svg)<br>
+
 This (hobby) project list the steps that I've used to build a Solaris 8 x86 virtual machine in VirtualBox.
-These steps were built from a number of sources that I used to guide me through the process.
+This guide was built from a number of sources that provided pieces of the puzzle, but not the complete picture
+of installing Solaris 8 x86 in VirtualBox.
 
 # Contents
 * [Introduction](#introduction)
@@ -8,6 +10,7 @@ These steps were built from a number of sources that I used to guide me through 
 * [System Requirements](#system-requirements)
 * [Getting Started](#getting-started)
 * [VirtualBox](#mark00)
+* [Installing: First Boot](#mark01)
 
 ## Introduction
 I've spent many years developing software in the Sun SPARC architecture,
@@ -16,8 +19,9 @@ up through the [Sun Ultra](https://en.wikipedia.org/wiki/Sun_Ultra_series) 1 and
 Those Sun systems were my first real taste of Unix and 32-bit computing.
 I remember that a [SPARCstation IPX](https://en.wikipedia.org/wiki/SPARCstation_IPX) was
 not fast enough to decode mp3 files and 1152x900 8-bit color was state-of-the-art graphics
-(yes there were 24-bit cards available, but they were expensive and very slow and not
-all of the software supported the 24 bit visuals).
+(yes there were 24-bit cards available, e.g. <code>cgtwelve</code>, but they were expensive
+and very slow and not all of the software supported the 24 bit visuals).<br>
+There's some interesting reading about framebuffers [here](http://www.sunhelp.org/faq/FrameBuffer.html).
 
 
 Once in a while, I need to do something in this olde OS, and
@@ -196,7 +200,7 @@ Ensure the 32-bit version is selected.
 
 * ![Systen settings](./images/VirtualBox-0003.png)<br>
 I configured a 2 CPU system.  I'm not sure how many CPU Solaris 8 x86 supports.<br>
-I believe based on [What's New in Solaris 8 Operating Environment](http://www.ing.iac.es/~cfg/pub_notes/solaris/solaris%208%20whatsnew.pdf),
+Based on [What's New in Solaris 8 Operating Environment](http://www.ing.iac.es/~cfg/pub_notes/solaris/solaris%208%20whatsnew.pdf),
 PAE is available<br>
 if you want to go above a 4 gigabyte memory configuration.
 
@@ -225,8 +229,30 @@ Multiple adaapters should work, but the network will require a different configu
 * No serial ports were configured.
 
 #### USB
-* Enabled -- don't know if this has any effect in Solaris 8.
+* Enabled -- USB is supported according to the documentation.
 
 #### Shared Folders
 * No folders are configured.
+
+<a name="mark01"></a>
+# <span style="text-align:left;">Installing: First Boot<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+
+<strong>It's suggested that you read through these steps before booting the VM for the first time.</strong><br>
+This is where a few non-obvious steps are taken to ensure a good build.
+* Start the virtual machine.
+You should see a brief booting screen followed by the following screen --<br>
+![First Boot 01](./images/firstBoot-001.png)<br>
+Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%">
+to continue the booting process.<br>
+The message "Determining bus types and gathering hardware configuration data ..." will be displayed
+with a text-based progress bar.
+* <strong>Review this screen.</strong><br>
+![First Boot 02](./images/firstBoot-002.png)<br>
+Ensure that it looks as close to this as possible.
+What you do <strong>not</strong> want to see are things like "Generic" which means the
+scan found a device, but does <strong>not</strong> have a driver for it.  The most likely
+cause is that there's an incorrect setting in the VM.  Power off the VM and review the
+[settings](#mark00) screens above.
+
+
 
