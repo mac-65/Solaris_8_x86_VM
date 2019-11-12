@@ -7,6 +7,8 @@ These steps were built from a number of sources that I used to guide me through 
 * [Introduction](#introduction)
 * [Disclaimer](#disclaimer)
 * [System Requirements](#system-requirements)
+* [Getting Started](#getting-started)
+* [VirtualBox](#virtualBox)
 
 ## Introduction
 I've spent many years developing software in the Sun SPARC architecture,
