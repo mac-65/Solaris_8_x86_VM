@@ -59,7 +59,7 @@ modifying, or distributing this SOFTWARE in this guide.<br>
 
 # System Requirements
 
-### VirtualBox
+### RPMFusion VirtualBox
 
 * The VirtualBox version is <code>4.3.32-1</code> (rpmfusion-free on <code>Fedora 21 x86_64, 4.1.13-100.fc21.x86_64</code>).<br>
 I've had later versions of VirtualBox crash and burn with some VMs I've built in the past.
