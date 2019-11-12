@@ -9,3 +9,5 @@ make-local.sh
 WS
 svgs/original.svg
 svgs/save.svg
+foo.png
+*.xcf

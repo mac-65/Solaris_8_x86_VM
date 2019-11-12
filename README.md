@@ -244,15 +244,21 @@ You should see a brief booting screen followed by the following screen --<br>
 ![First Boot 01](./images/firstBoot-001.png)<br>
 Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%">
 to continue the booting process.<br>
-The message "Determining bus types and gathering hardware configuration data ..." will be displayed
-with a text-based progress bar.
-* <strong>Review this screen.</strong><br>
-![First Boot 02](./images/firstBoot-002.png)<br>
+The <strong>Scanning Devices</strong>&nbsp;
+<img src="./images/firstBoot-001-scan.png" alt="progress bar" width="240" height="auto">
+screen with a text-based progress bar will be displayed.
+* <img src="./images/afaulconbridge_Lightbulb_OnOff_1.svg" alt="idea" width="20px" height="auto">
+<strong>Review this screen.</strong><br>
+<img src="./images/firstBoot-002.png" alt="firstBoot-002" width="720px" height="auto">
+<br>
 Ensure that it looks as close to this as possible.
 What you do <strong>not</strong> want to see are things like "Generic" which means the
 scan found a device, but does <strong>not</strong> have a driver for it.  The most likely
 cause is that there's an incorrect setting in the VM.  Power off the VM and review the
-[settings](#mark00) screens above.
+[settings](#mark00) screens above.  Then boot the VM and ensure it's correct.<br>
+If everything looks okay, then press
+<img src="./images/f2_key.png" alt="F2" width="3%" height="3%">
+to the next steps of the booting process.<br>
 
 
 
