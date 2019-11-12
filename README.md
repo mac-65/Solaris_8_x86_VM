@@ -9,8 +9,8 @@ of installing Solaris 8 x86 in VirtualBox.
 * [Disclaimer](#disclaimer)
 * [System Requirements](#system-requirements)
 * [Getting Started](#getting-started)
-* [VirtualBox](#mark00)
-* [Installing: First Boot](#mark01)
+* [VirtualBox](#virtualbox-configuration)
+* [Installing: First Boot](#installing-first-boot)
 
 ## Introduction
 I've spent many years developing software in the Sun SPARC architecture,
@@ -48,7 +48,8 @@ I haven't looked into it at all.
 I searched many dozens of sites for answers, the major sites are listed in
 these steps, TODO
 
-## <a name="disclaimer"></a><span style="text-align:left;">Disclaimer<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+<a name="disclaimer"></a>
+## <span style="text-align:left;">Disclaimer<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 ![Software is provided "as is" and "with all faults."](./svgs/disclaimer.svg)
 THE AUTHOR makes no representations or warranties of any kind concerning the safety, suitability,
 lack of viruses, inaccuracies, typographical errors, or other harmful components of SOFTWARE in this guide.
@@ -60,7 +61,8 @@ modifying, or distributing this SOFTWARE in this guide.<br>
 
 :boom: There are likely <i>many</i> bugs, errors, incomplete and missing features and documentation.
 
-# <a name="system-requirements"></a><span style="text-align:left;">System Requirements<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+<a name="system-requirements"></a>
+# <span style="text-align:left;">System Requirements<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 
 ### RPMFusion VirtualBox
 
@@ -129,7 +131,8 @@ each package that was prebuilt is listed with its name, brief description, and i
 This guide includes a simple script for getting the prebuilt binaries from [tgcware](http://jupiterrise.com/tgcware/sunos5.8_x86/stable/).
 
 
-# <span style="text-align:left;">Getting Started<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+<a name="getting-started">
+# </a><span style="text-align:left;">Getting Started<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 This guide includes some package install scripts to help smooth the process
 and perform some task that are minor enhancements or missing in the original.
 It is recommended that you review each script and make any changes suited to
@@ -181,8 +184,8 @@ Solaris 8 will automatically detect when the ISO image is mounted through Virtua
 
 <!-- It's a shame that github strips the style tags,
      have to make due with a few SPACEs before the button -->
-<a name="mark00"></a>
-# <span style="text-align:left;">VirtualBox<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+<a name="virtualbox-configuration"></a>
+# <span style="text-align:left;">VirtualBox Configuration<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 It's easier to show all of the screenshots of the VirtualBox setting that were used
 with notes as needed to clarify the process.<br>
 After building the new machine (setting its name, memory, and hard drive), use these
@@ -234,7 +237,7 @@ Multiple adaapters should work, but the network will require a different configu
 #### Shared Folders
 * No folders are configured.
 
-<a name="mark01"></a>
+<a name="installing-first-boot"></a>
 # <span style="text-align:left;">Installing: First Boot<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 
 <strong>It's suggested that you read through these steps before booting the VM for the first time.</strong><br>
@@ -248,13 +251,12 @@ The <strong>Scanning Devices</strong>&nbsp;<img src="./images/firstBoot-001-scan
 screen with a text-based progress bar will be displayed.
 
 * :exclamation: <strong>Review the following screen.</strong><br>
-<img src="./images/firstBoot-002.png" alt="firstBoot-002" width="720px" height="auto">
-<br>
+<img src="./images/firstBoot-002.png" alt="firstBoot-002" width="720px" height="auto"><br>
 Ensure that it looks as close to this as possible.
 What you do <strong>not</strong> want to see are things like "Generic" which means the scan
 found a device, but does <strong>not</strong> have a driver for it.
 The most likely cause is that there's an incorrect setting in the VM.
-Power off the VM and review the [settings](#mark00) screens above.
+Power off the VM and review the above [settings](#virtualbox-configuration) screens.
 Then boot the VM and ensure it's correct.<br>
 If everything looks okay, then press
 <img src="./images/f2_key.png" alt="F2" width="3%" height="3%">
