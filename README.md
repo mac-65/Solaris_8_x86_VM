@@ -1,4 +1,10 @@
 <a name="top00"></a>![Guide](./svgs/mainTitle.svg)<br>
+<style
+  type="text/css">
+  h1 {font-family: "Comic Sans MS", Arial, Helvetica, sans-serif; color: #0000F0;}
+  h2 {font-family: "Comic Sans MS", Arial, Helvetica, sans-serif; color: #0000D0;}
+  h3 {font-family: "Comic Sans MS", Arial, Helvetica, sans-serif; color: #0000D0;}
+</style>
 
 This (hobby) project list the steps that I've used to build a Solaris 8 x86 virtual machine in VirtualBox.
 This guide was built from a number of sources that provided pieces of the puzzle, but not the complete picture
@@ -12,6 +18,11 @@ of installing Solaris 8 x86 in VirtualBox.
 * [VirtualBox](#virtualbox-configuration)
 * [Installing: First Boot](#installing-first-boot)
  * [Video Device Selection](#video-device-selection)
+ * [Solaris Install Console](#solaris-install-console)
+ * [Select Name Serice](#select-name-service)
+ * [Setting the Time Zone](#select-time-zone)
+* [Solaris Interactive Install](#interactive-install)
+ * [Select Software](#select-software)
 
 ## Introduction
 I've spent many years developing software in the Sun SPARC architecture,
@@ -287,9 +298,10 @@ Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to continu
 Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to continue the installation.<br>
 
 <a name="video-device-selection"></a>
+# <span style="text-align:left;">Window System Configuraton<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+#### :camera: It's recommended that you take a snapshot of the VM here...<br>
 * <strong>Video Device Selection</strong>
-#### :camera: It's recommended that you take a snaphot of the VM here...<br>
-There are *a lot* of video devices listed, unfortunately only the first two are really available.<br>
+There are *a lot* of video devices listed, unfortunately only the first two are available.<br>
 I selected the second option just to get a little more useable screen (even with the panning).<br>
 <img src="./images/install-002-kdmconfig-3.png" alt="install-002" width="720px" height="auto"><br>
 Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to continue.<br>
@@ -309,31 +321,89 @@ Because panning was selected, select the panning size.<br>
 <img src="./images/install-002-kdmconfig-6.png" alt="install-002" width="720px" height="auto"><br>
 Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to continue.<br>
 
-* <strong><code>kdmconfig</code>:: Settings Complete</strong><br>
+<a name="#view-and-edit"></a>
+* <strong><code>kdmconfig</code>:: View and Edit Window System Configuration</strong><br>
 The installer will allow you to continue.<br>
 <img src="./images/install-002-kdmconfig-final.png" alt="install-002" width="720px" height="auto"><br>
 Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to continue.<br>
 
 * <strong><code>kdmconfig</code>:: Window System Configuration Test</strong><br>
 Make sure everything works.<br>
-:camera: It's recommended that you take a snaphot here<br>
 <img src="./images/install-002-kdmconfig-test.png" alt="test-001" width="720px" height="auto"><br>
 Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to perform the display test.<br><br>
 <img src="./images/install-002-kdmconfig-test-1.png" alt="test-002" width="720px" height="auto"><br>
+* If you see the above image, then the Window System Configuration was successful.<br>
+Note, not all of the colors _work_ (agree with their label), but this is how it looks.<br>
+If the display doesn't work, appears to hang, or is incorrect you can wait about 20 seconds
+and the screen will revert to the [View and Edit Window System Configuration](#view-and-edit) screen.<br>
+If everything looks fine, click in the VM's window and scroll to the big rounded <strong>Yes</strong> button
+to start the <strong>Solaris Install Console</strong>.
 
-<qq>
-* If you see the above image, then the Window System Configuration is usable.<br>
-You can click in the VM's window and scroll to the big rounded <strong>Yes</strong> button, or<br>
-you can wait (about) 20 seconds and the display will automatically revert to the following screen.
-</qq>
+<a name="#solaris-install-console"></a>
+# <span style="text-align:left;">Solaris Install Console<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+#### :camera: It's recommended that you take a snapshot of the VM here...<br>
+* The installation from this point requires the use of the mouse and follow the images.
+<img src="./images/install-colsole-001.png" alt="no changes" width="640px" height="auto"><br>
+Click <strong>Continue</strong>.<br>
+<img src="./images/install-colsole-002.png" alt="no changes" width="640px" height="auto"><br>
+Click <strong>Continue</strong>.<br>
+<img src="./images/install-colsole-003.png" alt="no changes" width="640px" height="auto"><br>
+Click <strong>Continue</strong>.<br>
+* Enter the VM's hostname.<br>
+<img src="./images/install-colsole-004.png" alt="no changes" width="640px" height="auto"><br>
+Click <strong>Continue</strong>.<br>
+* Enter the VM's IP address for the network device.<br>
+Note that the address must agree with the network configuration
+that the <strong>bridged adapter</strong> is connected to on the host.<br>
+<img src="./images/install-colsole-ip_address.png" alt="no changes" width="640px" height="auto"><br>
+Click <strong>Continue</strong>.<br>
+<img src="./images/install-colsole-subnet.png" alt="no changes" width="640px" height="auto"><br>
+Click <strong>Continue</strong>.<br>
+* Enter the appropriate <strong>Netmask</strong>.<br>
+<img src="./images/install-colsole-netmask.png" alt="no changes" width="640px" height="auto"><br>
+Click <strong>Continue</strong>.<br>
+<img src="./images/install-colsole-noipv6.png" alt="no changes" width="640px" height="auto"><br>
+Click <strong>Continue</strong>.<br>
 
-* <strong><code>kdmconfig</code>:: View and Edit Window System Configuration</strong><br>
+### <span style="text-align:left;">Confirm the Network Settings<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+* Confirm the setting and click <strong>Continue</strong>.<br>
+<img src="./images/install-colsole-confirm.png" alt="confirm" width="640px" height="auto"><br><br>
+Kerberos Security Settings (not used)<br>
+<img src="./images/install-colsole-kerberos.png" alt="no changes" width="640px" height="auto"><br>
+Click <strong>Continue</strong>.<br>
+<img src="./images/install-colsole-kerberos-1.png" alt="no changes" width="640px" height="auto"><br>
+Click <strong>Continue</strong>.<br>
 
-<style
-  type="text/css">
-h1 {font-family: "Comic Sans MS", Arial, Helvetica, sans-serif; color: #0000F0;}
-h2 {font-family: "Comic Sans MS", Arial, Helvetica, sans-serif; color: #0000D0;}
-</style>
+<a name="#select-name-service"></a>
+### <span style="text-align:left;">Select the Name Service<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+* Select <strong>None</strong> and press <strong>RETURN</strong>.<br>
+<img src="./images/install-colsole-noname.png" alt="confirm" width="640px" height="auto"><br><br>
+<img src="./images/install-colsole-noname-1.png" alt="confirm" width="640px" height="auto"><br>
+Click <strong>Continue</strong>.<br>
+
+<a name="#select-time-zone"></a>
+### <span style="text-align:left;">Select the Time Zone<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+* Nothing special in this section, just follow the prompts...
+
+<a name="#interactive-install"></a>
+### <span style="text-align:left;">Solaris Interactive Install<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+* Click <strong>Continue</strong>.<br>
+<img src="./images/interactive-001.png" alt="confirm" width="640px" height="auto"><br><br>
+
+* <strong>Select Geographic Regions</strong><br>
+I selected everything, but choose to suit you tastes...
+<img src="./images/interactive-002.png" alt="confirm" width="640px" height="auto"><br>
+Click <strong>Continue</strong>.<br>
+
+<a name="#select-software"></a>
+* <strong>Select Software</strong><br>
+Select <strong>Entire Distribution plus OEM support</strong>
+<img src="./images/interactive-software.png" alt="confirm" width="640px" height="auto"><br>
+* Click <strong>Continue</strong>.<br>
+
+
+
+okay
 
 
 
