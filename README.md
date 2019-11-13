@@ -336,6 +336,7 @@ to start the <strong>Solaris Install Console</strong>.
 
 <a name="#console-001"></a>
 # <span style="text-align:left;">Solaris Install Console<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+
 #### :camera: It's recommended that you take a snapshot of the VM here...<br>
 * The installation from this point requires the use of the mouse and follow the images.
 <img src="./images/install-colsole-001.png" alt="no changes" width="640px" height="auto"><br>
