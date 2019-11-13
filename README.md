@@ -11,6 +11,7 @@ of installing Solaris 8 x86 in VirtualBox.
 * [Getting Started](#getting-started)
 * [VirtualBox](#virtualbox-configuration)
 * [Installing: First Boot](#installing-first-boot)
+ * [Video Device Selection](#video-device-selection)
 
 ## Introduction
 I've spent many years developing software in the Sun SPARC architecture,
@@ -36,7 +37,7 @@ The process took longer than I expected
 but after getting things to actually work was pretty satisfying and fun.
 
 #### Not Covered In This Guide
-* <strong>Graphic beyond SVGA</strong> (800×600 4-bit color depth)<br>
+* <strong>Graphics beyond VGA/SVGA</strong> (640x480 or 800×600 4-bit color depth)<br>
 Looks like it may be possible (and may be non-trivial).<br>
 I just haven't looked into it yet; probably ties in with Guest Additions.
 <!-- https://docs.oracle.com/cd/E97728_01/F12469/html/adv-config-linux-guest.html -->
@@ -171,7 +172,7 @@ I've include some of my simple shell and vim hacks to get things started.
 <br>Put a copy of those files in the same location as all of the other files and
 the <code>0\*.sh</code> scripts as well.
 
-#### 5. Building the "tools" CD
+#### 5. Building the "tools" :cd:
 I decided, after a few install iterations, the easiest thing to do was to 
 create a CD ISO image containing all of the packages and scripts used to build the system.
 I emphasize a CD volume because I'm not sure if Solaris 8 "knows" about DVD file systems;
@@ -247,20 +248,94 @@ You should see a brief booting screen followed by the following screen --<br>
 ![First Boot 01](./images/firstBoot-001.png)<br>
 Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%">
 to continue the booting process.<br>
-The <strong>Scanning Devices</strong>&nbsp;<img src="./images/firstBoot-001-scan.png" alt="progress bar" width="180" height="auto">
-screen with a text-based progress bar will be displayed.
+The <strong>Scanning Devices</strong> screen with a text-based progress bar will be displayed.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./images/firstBoot-001-scan.png" alt="incomplete device list" width="540" height="auto"><br>
 
-* :exclamation: <strong>Review the following screen.</strong><br>
-<img src="./images/firstBoot-002.png" alt="firstBoot-002" width="720px" height="auto"><br>
-Ensure that it looks as close to this as possible.
-What you do <strong>not</strong> want to see are things like "Generic" which means the scan
-found a device, but does <strong>not</strong> have a driver for it.
-The most likely cause is that there's an incorrect setting in the VM.
-Power off the VM and review the above [settings](#virtualbox-configuration) screens.
-Then boot the VM and ensure it's correct.<br>
-If everything looks okay, then press
-<img src="./images/f2_key.png" alt="F2" width="3%" height="3%">
+:exclamation::exclamation: <strong>Review the Identified Devices screen.</strong><br>
+* <img src="./images/firstBoot-002.png" alt="firstBoot-002" width="720px" height="auto"><br>
+Ensure that it looks as close to this as possible and that none of the expected devices are missing or<br>
+"generically" identified (notice the missing <strong>ADS Sound Blaster</strong> and <strong>PCI: Ethernet controller</strong> entry). :arrow_lower_left:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./images/firstBoot-001-no_audio_device.png" alt="incomplete device list" width="540" height="auto"><br>
+If the Identified Devices screen looks like the above, then the most likely cause is that there's an incorrect setting in the VM.<br>
+Power off the VM and review the above settings screens [:up:](#virtualbox-configuration).
+Then boot the VM again and ensure it's correct.<br>
+
+* If everything looks okay, then press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%">
 to the next steps of the booting process.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./images/firstBoot-003-loading_ata.png" alt="incomplete device list" width="540" height="auto"><br>
+
+* After the driver is loaded the <strong>Boot Solaris</strong> screen appears.<br>
+Navigate using the arrow keys, then press SPACE to selct the CD device to boot Solaris 8.<br>
+<img src="./images/firstBoot-004-boot_from_device.png" alt="firstBoot-002" width="720px" height="auto"><br>
+Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to boot Solaris 8 and start the installation.
+
+* After the driver is loaded the <strong>Boot Solaris</strong> screen appears.<br>
+<img src="./images/firstBoot-005-interactive.png" alt="select-interactive" width="720px" height="auto"><br>
+<br>Select <strong>1. Solaris Interactive</strong> and press <strong>ENTER</strong> to boot the kernel.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./images/firstBoot-006-boot_kernel.png" alt="incomplete device list" width="540" height="auto"><br>
+
+* Perform the installation - select the language, etc. (only the interesting screens will be shown).<br>
+<img src="./images/firstBoot-007-start_install.png" alt="firstBoot-002" width="720px" height="auto"><br><br>
+<img src="./images/install-001.png" alt="install-001" width="720px" height="auto"><br>
+Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to continue the installation.<br>
+
+* You'll need to tell the installer about the video device.<br>
+A lot of steps are necessary to get a usable video configuration.<br>
+<img src="./images/install-002-kdmconfig.png" alt="install-002" width="720px" height="auto"><br>
+Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to continue the installation.<br><br>
+<img src="./images/install-002-kdmconfig-2.png" alt="install-002" width="720px" height="auto"><br>
+Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to continue the installation.<br>
+
+<a name="video-device-selection"></a>
+* <strong>Video Device Selection</strong>
+#### :camera: It's recommended that you take a snaphot of the VM here...<br>
+There are *a lot* of video devices listed, unfortunately only the first two are really available.<br>
+I selected the second option just to get a little more useable screen (even with the panning).<br>
+<img src="./images/install-002-kdmconfig-3.png" alt="install-002" width="720px" height="auto"><br>
+Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to continue.<br>
+
+* <strong>Monitor Type Selection</strong><br>
+I _think_ any *MultiFrequency* monitor will work, just pick the first.<br>
+<img src="./images/install-002-kdmconfig-4.png" alt="install-002" width="720px" height="auto"><br>
+Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to continue.<br>
+
+* <strong>Screen Size Selection</strong><br>
+Any size should work, I selected a 17-inch.<br>
+<img src="./images/install-002-kdmconfig-5.png" alt="install-002" width="720px" height="auto"><br>
+Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to continue.<br>
+
+* <strong>Virtual Screen Resolution Selection</strong><br>
+Because panning was selected, select the panning size.<br>
+<img src="./images/install-002-kdmconfig-6.png" alt="install-002" width="720px" height="auto"><br>
+Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to continue.<br>
+
+* <strong><code>kdmconfig</code>:: Settings Complete</strong><br>
+The installer will allow you to continue.<br>
+<img src="./images/install-002-kdmconfig-final.png" alt="install-002" width="720px" height="auto"><br>
+Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to continue.<br>
+
+* <strong><code>kdmconfig</code>:: Window System Configuration Test</strong><br>
+Make sure everything works.<br>
+:camera: It's recommended that you take a snaphot here<br>
+<img src="./images/install-002-kdmconfig-test.png" alt="test-001" width="720px" height="auto"><br>
+Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to perform the display test.<br><br>
+<img src="./images/install-002-kdmconfig-test-1.png" alt="test-002" width="720px" height="auto"><br>
+
+<qq>
+* If you see the above image, then the Window System Configuration is usable.<br>
+You can click in the VM's window and scroll to the big rounded <strong>Yes</strong> button, or<br>
+you can wait (about) 20 seconds and the display will automatically revert to the following screen.
+</qq>
+
+* <strong><code>kdmconfig</code>:: View and Edit Window System Configuration</strong><br>
+
+<style
+  type="text/css">
+h1 {font-family: "Comic Sans MS", Arial, Helvetica, sans-serif; color: #0000F0;}
+h2 {font-family: "Comic Sans MS", Arial, Helvetica, sans-serif; color: #0000D0;}
+</style>
 
 
+
+#### :camera: It's recommended that you take a snaphot of the VM here...<br>
 
