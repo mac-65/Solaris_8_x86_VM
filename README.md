@@ -17,6 +17,7 @@ of installing Solaris 8 x86 in VirtualBox.
   * [Setting the Time Zone](#select-time-zone)
 * [Solaris Interactive Install](#interactive-install)
   * [Select Software](#select-software)
+* [Test Link](#test-link)
 
 ## Introduction
 I've spent many years developing software in the Sun SPARC architecture,
@@ -29,6 +30,7 @@ not fast enough to decode mp3 files and 1152x900 8-bit color was state-of-the-ar
 and very slow and not all of the software supported the 24 bit visuals).<br>
 There's some interesting reading about framebuffers [here](http://www.sunhelp.org/faq/FrameBuffer.html).
 
+<a name="test-link">TEST LINK</a>
 
 Once in a while, I need to do something in this olde OS, and
 using a virtual machine makes it easy.
