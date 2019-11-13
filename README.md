@@ -1,10 +1,4 @@
 <a name="top00"></a>![Guide](./svgs/mainTitle.svg)<br>
-<style
-  type="text/css">
-  h1 {font-family: "Comic Sans MS", Arial, Helvetica, sans-serif; color: #0000F0;}
-  h2 {font-family: "Comic Sans MS", Arial, Helvetica, sans-serif; color: #0000D0;}
-  h3 {font-family: "Comic Sans MS", Arial, Helvetica, sans-serif; color: #0000D0;}
-</style>
 
 This (hobby) project list the steps that I've used to build a Solaris 8 x86 virtual machine in VirtualBox.
 This guide was built from a number of sources that provided pieces of the puzzle, but not the complete picture
@@ -403,6 +397,12 @@ Select <strong>Entire Distribution plus OEM support</strong>
 
 
 
+<style
+  type="text/css">
+  h1 {font-family: "Comic Sans MS", Arial, Helvetica, sans-serif; color: #0000F0;}
+  h2 {font-family: "Comic Sans MS", Arial, Helvetica, sans-serif; color: #0000D0;}
+  h3 {font-family: "Comic Sans MS", Arial, Helvetica, sans-serif; color: #0000D0;}
+</style>
 okay
 
 
