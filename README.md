@@ -11,8 +11,8 @@ of installing Solaris 8 x86 in VirtualBox.
 * [Getting Started](#getting-started)
 * [VirtualBox](#virtualbox-configuration)
 * [Installing: First Boot](#installing-first-boot)
-  * [Video Device Selection](#video-device-selection)
-  * [Solaris Install Console](#solaris-install-console)
+  * [Window System Configuraton](#video-device-selection)
+  * [Solaris Install Console](#install-console)
   * [Select Name Serice](#select-name-service)
   * [Setting the Time Zone](#select-time-zone)
 * [Solaris Interactive Install](#interactive-install)
@@ -177,7 +177,7 @@ I've include some of my simple shell and vim hacks to get things started.
 <br>Put a copy of those files in the same location as all of the other files and
 the <code>0\*.sh</code> scripts as well.
 
-#### 5. Building the "tools" :cd:
+#### 5. Building the "tools" CD :cd:
 I decided, after a few install iterations, the easiest thing to do was to 
 create a CD ISO image containing all of the packages and scripts used to build the system.
 I emphasize a CD volume because I'm not sure if Solaris 8 "knows" about DVD file systems;
@@ -333,7 +333,7 @@ and the screen will revert to the [View and Edit Window System Configuration](#v
 If everything looks fine, click in the VM's window and scroll to the big rounded <strong>Yes</strong> button
 to start the <strong>Solaris Install Console</strong>.
 
-<a name="#solaris-install-console"></a>
+<a name="#install-console"></a>
 # <span style="text-align:left;">Solaris Install Console<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 #### :camera: It's recommended that you take a snapshot of the VM here...<br>
 * The installation from this point requires the use of the mouse and follow the images.
