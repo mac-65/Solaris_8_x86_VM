@@ -30,7 +30,8 @@ not fast enough to decode mp3 files and 1152x900 8-bit color was state-of-the-ar
 and very slow and not all of the software supported the 24 bit visuals).<br>
 There's some interesting reading about framebuffers [here](http://www.sunhelp.org/faq/FrameBuffer.html).
 
-<a name="test-link">TEST LINK</a>
+<a name="test-link"></a>
+## <span style="text-align:left;">TEST LINK<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 
 Once in a while, I need to do something in this olde OS, and
 using a virtual machine makes it easy.
