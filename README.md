@@ -282,9 +282,6 @@ Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to boot So
 <img src="./images/install-001.png" alt="install-001" width="720px" height="auto"><br>
 Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to continue the installation.<br>
 
-<a name="test-link"></a>
-## <span style="text-align:left;">TEST LINK<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
-
 * You'll need to tell the installer about the video device.<br>
 A lot of steps are necessary to get a usable video configuration.<br>
 <img src="./images/install-002-kdmconfig.png" alt="install-002" width="720px" height="auto"><br>
@@ -333,6 +330,9 @@ If the display doesn't work, appears to hang, or is incorrect you can wait about
 and the screen will revert to the [View and Edit Window System Configuration](#view-and-edit) screen.<br>
 If everything looks fine, click in the VM's window and scroll to the big rounded <strong>Yes</strong> button
 to start the <strong>Solaris Install Console</strong>.
+
+<a name="test-link"></a>
+## <span style="text-align:left;">TEST LINK<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 
 <a name="#install-console"></a>
 # <span style="text-align:left;">Solaris Install Console<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
