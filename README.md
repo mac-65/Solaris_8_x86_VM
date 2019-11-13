@@ -11,12 +11,12 @@ of installing Solaris 8 x86 in VirtualBox.
 * [Getting Started](#getting-started)
 * [VirtualBox](#virtualbox-configuration)
 * [Installing: First Boot](#installing-first-boot)
- * [Video Device Selection](#video-device-selection)
- * [Solaris Install Console](#solaris-install-console)
- * [Select Name Serice](#select-name-service)
- * [Setting the Time Zone](#select-time-zone)
+  * [Video Device Selection](#video-device-selection)
+  * [Solaris Install Console](#solaris-install-console)
+  * [Select Name Serice](#select-name-service)
+  * [Setting the Time Zone](#select-time-zone)
 * [Solaris Interactive Install](#interactive-install)
- * [Select Software](#select-software)
+  * [Select Software](#select-software)
 
 ## Introduction
 I've spent many years developing software in the Sun SPARC architecture,
