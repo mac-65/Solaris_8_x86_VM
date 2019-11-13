@@ -13,7 +13,7 @@ of installing Solaris 8 x86 in VirtualBox.
 * [Installing: First Boot](#installing-first-boot)
   * [Window System Configuraton](#video-device-selection)
   * [Solaris Install Console](#install-console)
-  * [Select Name Serice](#select-name-service)
+  * [Select Name Service](#select-name-service)
   * [Setting the Time Zone](#select-time-zone)
 * [Solaris Interactive Install](#interactive-install)
   * [Select Software](#select-software)
@@ -136,15 +136,13 @@ each package that was prebuilt is listed with its name, brief description, and i
 <br>
 This guide includes a simple script for getting the prebuilt binaries from [tgcware](http://jupiterrise.com/tgcware/sunos5.8_x86/stable/).
 
-
 <a name="getting-started">
-# </a><span style="text-align:left;">Getting Started<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+# </a><span style="text-align:left;">Getting Started<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span><br>
 This guide includes some package install scripts to help smooth the process
 and perform some task that are minor enhancements or missing in the original.
 It is recommended that you review each script and make any changes suited to
 your particular environment or needs.  The scripts are named as <code>001-gzip.sh</code>, etc.,
 so that <code>ls 0\*.sh</code> will list all of the scripts.
-
 
 #### 1. Download the ISOs
 Use your browser or use <code>wget</code> to get the ISOs, e.g.<br>
@@ -369,7 +367,7 @@ Click <strong>Continue</strong>.<br>
 Click <strong>Continue</strong>.<br>
 
 <a name="#select-name-service"></a>
-### <span style="text-align:left;">Select the Name Service<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+### <span style="text-align:left;">Select Name Service<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 * Select <strong>None</strong> and press <strong>RETURN</strong>.<br>
 <img src="./images/install-colsole-noname.png" alt="confirm" width="640px" height="auto"><br><br>
 <img src="./images/install-colsole-noname-1.png" alt="confirm" width="640px" height="auto"><br>
