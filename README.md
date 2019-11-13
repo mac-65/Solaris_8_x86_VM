@@ -136,7 +136,7 @@ each package that was prebuilt is listed with its name, brief description, and i
 <br>
 This guide includes a simple script for getting the prebuilt binaries from [tgcware](http://jupiterrise.com/tgcware/sunos5.8_x86/stable/).
 
-<a name="getting-started">
+<a name="getting-started"></a>
 # </a><span style="text-align:left;">Getting Started<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span><br>
 This guide includes some package install scripts to help smooth the process
 and perform some task that are minor enhancements or missing in the original.
