@@ -15,7 +15,6 @@ of installing Solaris 8 x86 in VirtualBox.
   * [Solaris Install Console](#install-console)
   * [Select Name Service](#name-service)
   * [Setting the Time Zone](#time-zone)
-  * [Setting the Time Zone](#select-time-zone)
 * [Solaris Interactive Install](#interactive-install)
   * [Select Software](#select-software)
 * [Test Link](#install-console)
@@ -317,7 +316,7 @@ Because panning was selected, select the panning size.<br>
 <img src="./images/install-002-kdmconfig-6.png" alt="install-002" width="720px" height="auto"><br>
 Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to continue.<br>
 
-<a name="#view-and-edit"></a>
+<a name="view-and-edit"></a>
 * <strong><code>kdmconfig</code>:: View and Edit Window System Configuration</strong><br>
 The installer will allow you to continue.<br>
 <img src="./images/install-002-kdmconfig-final.png" alt="install-002" width="720px" height="auto"><br>
@@ -380,12 +379,9 @@ Click <strong>Continue</strong>.<br>
 
 <a name="time-zone"></a>
 ### <span style="text-align:left;">Select the Time Zone<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
-
-<a name="#select-time-zone"></a>
-### <span style="text-align:left;">Select the Time Zone<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 * Nothing special in this section, just follow the prompts and set to your preferences...
 
-<a name="#interactive-install"></a>
+<a name="interactive-install"></a>
 ### <span style="text-align:left;">Solaris Interactive Install<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 * Click <strong>Continue</strong>.<br>
 <img src="./images/interactive-001.png" alt="confirm" width="640px" height="auto"><br><br>
@@ -395,7 +391,7 @@ I selected everything, but choose to suit you tastes...
 <img src="./images/interactive-002.png" alt="confirm" width="640px" height="auto"><br>
 Click <strong>Continue</strong>.<br>
 
-<a name="#select-software"></a>
+<a name="select-software"></a>
 * <strong>Select Software</strong><br>
 Select <strong>Entire Distribution plus OEM support</strong>
 <img src="./images/interactive-software.png" alt="confirm" width="640px" height="auto"><br>
