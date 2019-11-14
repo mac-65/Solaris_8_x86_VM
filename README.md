@@ -38,7 +38,7 @@ But, building the virtual machine had its challenges from:
 * finding installable ISO images,
 * finding recommended patches,
 * finding pre-built packages, and
-* "fixing" things that seemed to have been broken in the original OS and the patches.
+* making Solaris a little more [GNU/Linux](https://en.wikipedia.org/wiki/GNU/Linux_naming_controversy)-like and "fixing" some broken things in the OS and the patches.
 
 The process took longer than I expected
 but after getting things to actually work was pretty satisfying and fun.
