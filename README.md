@@ -334,7 +334,7 @@ If everything looks fine, click in the VM's window and scroll to the big rounded
 to start the <strong>Solaris Install Console</strong>.
 
 <a name="test-link"></a>
-# <span style="text-align:left;">TEST LINK<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+# <span style="text-align:left;">Solaris Install Console<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 
 <a name="#installing-solaris"></a>
 # <span style="text-align:left;">Solaris Install Console<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
