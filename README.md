@@ -13,7 +13,6 @@ of installing Solaris 8 x86 in VirtualBox.
 * [Installing: First Boot](#installing-first-boot)
   * [Window System Configuraton](#video-device-selection)
   * [Solaris Install Console](#install-console)
-  * [Select Name Service](#install-console)
   * [Select Name Service](#name-service)
   * [Setting the Time Zone](#select-time-zone)
 * [Solaris Interactive Install](#interactive-install)
@@ -372,9 +371,6 @@ Click <strong>Continue</strong>.<br>
 Click <strong>Continue</strong>.<br>
 
 <a name="name-service"></a>
-### <span style="text-align:left;">Select Name Service<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
-
-<a name="#name-service-x"></a>
 ### <span style="text-align:left;">Select Name Service<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 * Select <strong>None</strong> and press <strong>RETURN</strong>.<br>
 <img src="./images/install-colsole-noname.png" alt="confirm" width="640px" height="auto"><br><br>
