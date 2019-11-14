@@ -208,7 +208,9 @@ Notice that the floppy disk is unchecked from the <strong>Boot Order:</strong> l
 2 gigabytes is pretty generous for these old architectures... <br>
 
 * ![Systen settings](./images/VirtualBox-0003.png)<br>
-I configured a 2 CPU system.  I'm not sure how many CPU Solaris 8 x86 supports.<br>
+I configured a 2 CPU system.  I'm not sure how many CPUs Solaris 8 x86 supports.
+Though, it's easy to add CPUs to the system after it's built and see if they're
+seen by the Solaris 8 kernel after the system is rebooted.<br>
 Based on [What's New in Solaris 8 Operating Environment](http://www.ing.iac.es/~cfg/pub_notes/solaris/solaris%208%20whatsnew.pdf),
 PAE is available<br>
 if you want to go above a 4 gigabyte memory configuration.
@@ -369,7 +371,10 @@ Click <strong>Continue</strong>.<br>
 <img src="./images/install-colsole-kerberos-1.png" alt="no changes" width="640px" height="auto"><br>
 Click <strong>Continue</strong>.<br>
 
-<a name="#name-service"></a>
+<a name="name-service"></a>
+### <span style="text-align:left;">Select Name Service<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+
+<a name="#name-service-x"></a>
 ### <span style="text-align:left;">Select Name Service<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 * Select <strong>None</strong> and press <strong>RETURN</strong>.<br>
 <img src="./images/install-colsole-noname.png" alt="confirm" width="640px" height="auto"><br><br>
