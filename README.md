@@ -7,7 +7,7 @@ of installing Solaris 8 x86 in VirtualBox.
 # Contents
 * [Introduction](#introduction)
 * [Disclaimer](#disclaimer)
-* [System Requirements](#system-requirements)
+* [System & Software Requirements](#system-requirements)
 * [Getting Started](#getting-started)
 * [VirtualBox](#virtualbox-configuration)
 * [Installing: First Boot](#installing-first-boot)
@@ -68,7 +68,7 @@ modifying, or distributing this SOFTWARE in this guide.<br>
 :boom: There are likely <i>many</i> bugs, errors, incomplete and missing features and documentation.
 
 <a name="system-requirements"></a>
-# <span style="text-align:left;">System Requirements<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+# <span style="text-align:left;">System & Software Requirements<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 
 ### RPMFusion VirtualBox
 
