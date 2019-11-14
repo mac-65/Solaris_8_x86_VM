@@ -14,6 +14,7 @@ of installing Solaris 8 x86 in VirtualBox.
   * [Window System Configuraton](#video-device-selection)
   * [Solaris Install Console](#install-console)
   * [Select Name Service](#name-service)
+  * [Setting the Time Zone](#time-zone)
   * [Setting the Time Zone](#select-time-zone)
 * [Solaris Interactive Install](#interactive-install)
   * [Select Software](#select-software)
@@ -377,9 +378,12 @@ Click <strong>Continue</strong>.<br>
 <img src="./images/install-colsole-noname-1.png" alt="confirm" width="640px" height="auto"><br>
 Click <strong>Continue</strong>.<br>
 
+<a name="time-zone"></a>
+### <span style="text-align:left;">Select the Time Zone<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+
 <a name="#select-time-zone"></a>
 ### <span style="text-align:left;">Select the Time Zone<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
-* Nothing special in this section, just follow the prompts...
+* Nothing special in this section, just follow the prompts and set to your preferences...
 
 <a name="#interactive-install"></a>
 ### <span style="text-align:left;">Solaris Interactive Install<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
