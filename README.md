@@ -12,7 +12,7 @@ of installing Solaris 8 x86 in VirtualBox.
 * [VirtualBox](#virtualbox-configuration)
 * [Installing: First Boot](#installing-first-boot)
   * [Window System Configuraton](#video-device-selection)
-  * [Test Link](#test-link)
+  * [Solaris Install Console](#test-link)
   * [Solaris Install Console](#installing-solaris)
   * [Test Link](#test-link)
   * [Select Name Service](#select-name-service)
