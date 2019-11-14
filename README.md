@@ -21,15 +21,17 @@ of installing Solaris 8 x86 in VirtualBox.
   * [HD Partition Layout](#partition-layout)
   * [Customize the File System](#customize-fs)
     * [Simple File System History](#fs-history)
+* [Installing: Reboot](#installing-reboot)
 * [Test Link](#install-console)
 
 ## Introduction
 I've spent many years developing software in the Sun SPARC architecture,
 first on the [SPARCstation 1](https://en.wikipedia.org/wiki/SPARCstation_1) (Sun 4/60)
 up through the [Sun Ultra](https://en.wikipedia.org/wiki/Sun_Ultra_series) 1 and 2.
-Those Sun systems were my first real taste of Unix and 32-bit computing.
+Those Sun systems were my first real taste of Unix and 32-bit computing.<br>
 I remember that a [SPARCstation IPX](https://en.wikipedia.org/wiki/SPARCstation_IPX) was
-not fast enough to decode mp3 files and 1152x900 8-bit color was state-of-the-art graphics
+not fast enough to decode mp3 files.
+1152x900 8-bit color was state-of-the-art graphics
 (yes there were 24-bit cards available, e.g. <code>cgtwelve</code>, but they were expensive
 and very slow and not all of the software supported the 24 bit visuals).<br>
 There's some interesting reading about framebuffers [here](http://www.sunhelp.org/faq/FrameBuffer.html).
@@ -437,10 +439,38 @@ rule of thumb, you should <strong>not</strong> change their meanings.  In simpli
   the <code>/export/home</code> filesystem.
 * Start by shrinking the <code>/export/home</code> filesystem to <strong>100 MB</strong>.<br>
 This will stop the installer from complaining when you increase the size of other partitions.<br>
+Generally, this guide requires about 1.5GB in the root filesystem, but if you want to add<br>
+additional packages and tools, you'll need to size it accordingly.<br>
+Below are the setting that were used for this VM.<br>
+When you are satisfied, pan down and press <strong>OK</strong>, and then press <strong>Continue</strong>. 
 <img src="./images/interactive-customize-2.png" alt="confirm" width="640px" height="auto"><br>
 
+* <strong>Mount Remote File Systems?</strong>
+Nothing to do here, so press <strong>Continue</strong>.
 
+#### :camera: It's recommended that you take a snaphot of the VM here...<br>
+* <strong>Mount Remote File Systems?</strong><br>
+Review your configuration and press <strong>Begin Installation</strong> to install Solaris 8 x86.
+<img src="./images/interactive-final-profile.png" alt="reviw" width="640px" height="auto"><br>
 
+#### Select <strong>Auto Reboot</strong> and the Installation Will Begin...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./images/interactive-auto-reboot.png" alt="reviw" width="569px" height="auto"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...right after you click the <strong>OK</strong> in one more information box after the above dialogue.<br>
+
+#### Some Installation Caps:
+* The installation to the first reboot takes about ½ hour or so.  Your mileage may vary...<br>
+<img src="./images/cap-003s.png" alt="cap" width="320px" height="auto">&nbsp;
+<img src="./images/cap-006s.png" alt="cap" width="320px" height="auto"><br>
+
+<a name="installing-reboot"></a>
+# <span style="text-align:left;">Installing: Reboot<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+* <strong>Solaris Device Configuration Assistant</strong><br>
+After the first part of the installaton has finished, the system is rebooted to the<br>
+Solaris Device Configuration Assistant.<br>
+<img src="./images/reboot-001.png" alt="Rebooted screen" width="720px" height="auto"><br>
+Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%">
+to continue the booting process.<br>
+The <strong>Identified Devices</strong>
 
 
 
