@@ -14,7 +14,7 @@ of installing Solaris 8 x86 in VirtualBox.
   * [Window System Configuraton](#video-device-selection)
   * [Solaris Install Console](#install-console)
   * [Select Name Service](#install-console)
-  * [Select Name Service](#select-name-service)
+  * [Select Name Service](#name-service)
   * [Setting the Time Zone](#select-time-zone)
 * [Solaris Interactive Install](#interactive-install)
   * [Select Software](#select-software)
@@ -204,6 +204,7 @@ Ensure the 32-bit version is selected.
 
 #### System
 * ![System settings](./images/VirtualBox-0002.png)<br>
+Notice that the floppy disk is unchecked from the <strong>Boot Order:</strong> list, and<br>
 2 gigabytes is pretty generous for these old architectures... <br>
 
 * ![Systen settings](./images/VirtualBox-0003.png)<br>
@@ -368,7 +369,7 @@ Click <strong>Continue</strong>.<br>
 <img src="./images/install-colsole-kerberos-1.png" alt="no changes" width="640px" height="auto"><br>
 Click <strong>Continue</strong>.<br>
 
-<a name="#select-name-service"></a>
+<a name="#name-service"></a>
 ### <span style="text-align:left;">Select Name Service<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 * Select <strong>None</strong> and press <strong>RETURN</strong>.<br>
 <img src="./images/install-colsole-noname.png" alt="confirm" width="640px" height="auto"><br><br>
