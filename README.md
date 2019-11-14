@@ -9,7 +9,7 @@ of installing Solaris 8 x86 in VirtualBox.
 * [Disclaimer](#disclaimer)
 * [System & Software Requirements](#system-requirements)
 * [Getting Started](#getting-started)
-* [VirtualBox](#virtualbox-configuration)
+* [VirtualBox Configuration](#virtualbox-configuration)
 * [Installing: First Boot](#installing-first-boot)
   * [Window System Configuraton](#video-device-selection)
   * [Solaris Install Console](#install-console)
@@ -17,6 +17,10 @@ of installing Solaris 8 x86 in VirtualBox.
   * [Setting the Time Zone](#time-zone)
 * [Solaris Interactive Install](#interactive-install)
   * [Select Software](#select-software)
+  * [Select Disks](#select-hd)
+  * [HD Partition Layout](#partition-layout)
+  * [Customize the File System](#customize-fs)
+    * [Simple File System History](#fs-history)
 * [Test Link](#install-console)
 
 ## Introduction
@@ -183,7 +187,8 @@ if it can, then use whatever format you want (although most burners will select 
 format automatically based on the size of the image to create).<br>
 Note, <i>you don't actually need to burn a CD</i>, just use whatever software to create a CD image file
 that can be mounted in VirtualBox.  I used <strong>K3b</strong>.
-Solaris 8 will automatically detect when the ISO image is mounted through VirtualBox.
+Solaris 8 will automatically detect when the ISO image is mounted through VirtualBox
+(unless it's in single user/maintenance mode).
 
 
 <!-- It's a shame that github strips the style tags,
@@ -202,38 +207,40 @@ Items that are not show are settings that don't affect the outcome
 Ensure the 32-bit version is selected.
 
 #### System
-* ![System settings](./images/VirtualBox-0002.png)<br>
-Notice that the floppy disk is unchecked from the <strong>Boot Order:</strong> list, and<br>
-2 gigabytes is pretty generous for these old architectures... <br>
+* Notice that the floppy disk is unchecked from the <strong>Boot Order:</strong> list, and<br>
+2 gigabytes is pretty generous for these old architectures...<br>
+![System settings](./images/VirtualBox-0002.png)<br>
 
-* ![Systen settings](./images/VirtualBox-0003.png)<br>
-I configured a 2 CPU system.  I'm not sure how many CPUs Solaris 8 x86 supports.
-Though, it's easy to add CPUs to the system after it's built and see if they're
-seen by the Solaris 8 kernel after the system is rebooted.<br>
+* I configured a 2 CPU system.  I'm not sure how many CPUs Solaris 8 x86 supports.<br>
+It's trivial to add CPUs to the system after it's built and see if they're
+seen by the Solaris 8<br>
+kernel after the system is rebooted.<br>
+![Systen settings](./images/VirtualBox-0003.png)<br>
 Based on [What's New in Solaris 8 Operating Environment](http://www.ing.iac.es/~cfg/pub_notes/solaris/solaris%208%20whatsnew.pdf),
-PAE is available<br>
-if you want to go above a 4 gigabyte memory configuration.
+Solaris 8 x86 will support 32 Gbytes of<br>
+memory using PAE if you want to go above a 4 gigabyte memory configuration.
 
 * ![Systen settings](./images/VirtualBox-0004.png)<br>
 
 
 #### Display
-* ![Display settings](./images/VirtualBox-0005.png)<br>
-I don't know if <strong>Enable 3D Acceleration</strong> actually helps (doesn't hurt, though).
+* I don't know if <strong>Enable 3D Acceleration</strong> actually helps (doesn't hurt, though).<br>
+The video memory size is just a guess and should be okay.<br>
+![Display settings](./images/VirtualBox-0005.png)<br>
 
 #### Storage
-* ![Storage settings](./images/VirtualBox-0006.png)<br>
-Install the Solaris 8 media <strong>sol-8-u7-ia-v1.iso</strong>, this is the boot media.
+* Install/mount the Solaris 8 media <strong>sol-8-u7-ia-v1.iso</strong>, this is the boot media.<br>
+![Storage settings](./images/VirtualBox-0006.png)<br>
 
 #### Audio
-* ![Audio settings](./images/VirtualBox-0007.png)<br>
+* You can configure the VM to support audio.  I'm not 100% what this is as far as number of channels or bits.<br>
+![Audio settings](./images/VirtualBox-0007.png)<br>
 
 #### Network
-* ![Network settings](./images/VirtualBox-0008.png)<br>
-Ensure that the adapter type is set <strong>PCnet-PCI II (Am79C970A)</strong> (others may work, I haven't tried).<br>
-Multiple adaapters should work, but the network will require a different configuration
-(I believe)
-<br>and this guide does not cover those steps.
+* Ensure that the adapter type is set <strong>PCnet-PCI II (Am79C970A)</strong> (others may work, I haven't tried).<br>
+Multiple adaapters should work, but the network will require a different configuration (I believe)<br>
+and this guide does not cover those steps.<br>
+![Network settings](./images/VirtualBox-0008.png)<br>
 
 #### Serial Ports
 * No serial ports were configured.
@@ -382,7 +389,7 @@ Click <strong>Continue</strong>.<br>
 * Nothing special in this section, just follow the prompts and set to your preferences...
 
 <a name="interactive-install"></a>
-### <span style="text-align:left;">Solaris Interactive Install<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+## <span style="text-align:left;">Solaris Interactive Install<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 * Click <strong>Continue</strong>.<br>
 <img src="./images/interactive-001.png" alt="confirm" width="640px" height="auto"><br><br>
 
@@ -393,9 +400,47 @@ Click <strong>Continue</strong>.<br>
 
 <a name="select-software"></a>
 * <strong>Select Software</strong><br>
-Select <strong>Entire Distribution plus OEM support</strong>
+Select <strong>Entire Distribution plus OEM support</strong>;
+it's ensures you'll have everything needed for the system.
 <img src="./images/interactive-software.png" alt="confirm" width="640px" height="auto"><br>
-* Click <strong>Continue</strong>.<br>
+Click <strong>Continue</strong>.<br>
+
+<a name="select-hd"></a>
+* <strong>Select Disks</strong><br>
+The installer should have pre-selected <strong>c0d0</strong>,<br>
+Click <strong>Continue</strong>.<br>
+<img src="./images/interactive-hd-selection.png" alt="confirm" width="640px" height="auto"><br>
+* Click <strong>Auto Layout</strong>.<br>
+<img src="./images/interactive-auto-layout.png" alt="confirm" width="640px" height="auto"><br>
+* You can split up the OS filesystem layout here if you want, but this is the simplest approach.<br>
+Click <strong>Continue</strong>.<br>
+<img src="./images/interactive-auto-layout-2.png" alt="confirm" width="640px" height="auto"><br>
+
+<a name="customize-fs"></a>
+#### <span style="text-align:left;">Customize the File System<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+* The default provided by the installer is too small and won't accomidate the prebuilt software, etc.<br>
+Click <strong>Customize</strong>.<br><br>
+<img src="./images/interactive-customize.png" alt="confirm" width="640px" height="auto"><br>
+<a name="fs-history"></a>
+* <strong>Some Solaris FS history.</strong><br>
+For long forgotten reasons (at least I don't remember :innocent:), every vendor had their own particular<br>
+way of dealing with file systems on hard drives.  Sun microsystems was no different.  Hard drives<br>
+are split into 8 partitions and they're generally "hard-wired" with specific functions and as a good<br>
+rule of thumb, you should <strong>not</strong> change their meanings.  In simplist terms:<br>
+  * the root <code>/</code> filesystem was set to be found on partition 0;
+  * the <code>swap</code> filesystem was partition 1; and
+  * partition 2 always mapped to the whole drive (<i>don't change this value</i>).<br>
+
+  These should not be changed unless you have a very specific need to do so.
+  Partitions 3 through 7<br>
+  were freely configurable, and usually partition 7 contained
+  the <code>/export/home</code> filesystem.
+* Start by shrinking the <code>/export/home</code> filesystem to <strong>100 MB</strong>.<br>
+This will stop the installer from complaining when you increase the size of other partitions.<br>
+<img src="./images/interactive-customize-2.png" alt="confirm" width="640px" height="auto"><br>
+
+
+
 
 
 
