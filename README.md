@@ -13,8 +13,6 @@ of installing Solaris 8 x86 in VirtualBox.
 * [Installing: First Boot](#installing-first-boot)
   * [Window System Configuraton](#video-device-selection)
   * [Solaris Install Console](#install-console)
-  * [Solaris Install Console](#installing-solaris)
-  * [Test Link](#install-console)
   * [Select Name Service](#select-name-service)
   * [Setting the Time Zone](#select-time-zone)
 * [Solaris Interactive Install](#interactive-install)
@@ -334,9 +332,6 @@ If everything looks fine, click in the VM's window and scroll to the big rounded
 to start the <strong>Solaris Install Console</strong>.
 
 <a name="install-console"></a>
-# <span style="text-align:left;">Solaris Install Console<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
-
-<a name="#installing-solaris"></a>
 # <span style="text-align:left;">Solaris Install Console<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 
 #### :camera: It's recommended that you take a snapshot of the VM here...<br>
