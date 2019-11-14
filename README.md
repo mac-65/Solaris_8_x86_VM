@@ -333,11 +333,11 @@ and the screen will revert to the [View and Edit Window System Configuration](#v
 If everything looks fine, click in the VM's window and scroll to the big rounded <strong>Yes</strong> button
 to start the <strong>Solaris Install Console</strong>.
 
+<a name="test-link"></a>
+# <span style="text-align:left;">TEST LINK<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+
 <a name="#installing-solaris"></a>
 # <span style="text-align:left;">Solaris Install Console<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
-
-<a name="test-link"></a>
-## <span style="text-align:left;">TEST LINK<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 
 #### :camera: It's recommended that you take a snapshot of the VM here...<br>
 * The installation from this point requires the use of the mouse and follow the images.
