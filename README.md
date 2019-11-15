@@ -8,11 +8,13 @@ of installing Solaris 8 x86 in VirtualBox.<br>
 * [Introduction](#introduction)
 * [Disclaimer](#disclaimer)
 * [System & Software Requirements](#system-requirements)
+  * [VirtualBox <code>4.3.32-1</code>](#virtualbox-rpmfusion)
 * [Getting Started](#getting-started)
   * [Download the Solaris 8 x86 ISO Images](#get-isos)
   * [Download the Solaris 8 x86 Recommended Patch Cluster(s)](#get-recommended)
   * [Download the <code>tgcware</code>Prebuilt Packages](#get-tgcware)
   * [Review the Scripts and Templates](#review-dot-scripts)
+  * [Build the Guide CD](#build-cd)
 * [VirtualBox Configuration](#virtualbox-configuration)
 * [Installing: First Boot](#installing-first-boot)
   * [Window System Configuraton](#video-device-selection)
@@ -24,7 +26,7 @@ of installing Solaris 8 x86 in VirtualBox.<br>
   * [Select Disks](#select-hd)
   * [HD Partition Layout](#partition-layout)
   * [Customize the File System](#customize-fs)
-    * [Simple File System History](#fs-history)
+    * [File System History, FYI](#fs-history)
 * [Installing: Reboot](#installing-reboot)
 * [Test Link](#install-console)
 
@@ -80,6 +82,7 @@ modifying, or distributing this SOFTWARE in this guide.<br>
 <a name="system-requirements"></a>
 # <span style="text-align:left;">System & Software Requirements<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 
+<a name="virtualbox-rpmfusion"></a>
 ### RPMFusion VirtualBox
 
 * The VirtualBox version is <code>4.3.32-1</code> (rpmfusion-free on <code>Fedora 21 x86_64, 4.1.13-100.fc21.x86_64</code>).<br>
@@ -434,14 +437,15 @@ Click <strong>Continue</strong>.<br>
 Click <strong>Customize</strong>.<br><br>
 <img src="./images/interactive-customize.png" alt="confirm" width="640px" height="auto"><br>
 <a name="fs-history"></a>
-* <strong>Some Solaris FS history.</strong><br>
+* <strong>Solaris FS history, FYI</strong><br>
 For long forgotten reasons (at least I don't remember :innocent:), every vendor had their own particular<br>
-way of dealing with file systems on hard drives.  Sun microsystems was no different.  Sun hard drives<br>
-are split into 8 partitions and they're generally "hard-wired" with specific usages.  As a good<br>
+way of dealing with file systems on hard drives.  Sun microsystems was no different.  A Sun hard drive<br>
+is split into 8 partitions and each partition is generally "hard-wired" with a specific use.  As a good<br>
 rule of thumb, you should <strong>not</strong> change their meanings.  In simplist terms:<br>
-  * the root <code>/</code> filesystem was set to be found on partition 0;
+  * the root <code>/</code> filesystem should be installed on partition 0;
   * the <code>swap</code> filesystem was partition 1; and
   * partition 2 always mapped to the whole drive (<i>don't change this value</i>).<br>
+  This is generally used when the whole drive is a single partition.
 
   These should not be changed unless you have a very specific need to do so.
   Partitions 3 through 7<br>
@@ -455,17 +459,17 @@ Below are the setting that were used for this VM.<br>
 When you are satisfied, pan down and press <strong>OK</strong>, and then press <strong>Continue</strong>. 
 <img src="./images/interactive-customize-2.png" alt="confirm" width="640px" height="auto"><br>
 
-* <strong>Mount Remote File Systems?</strong>
+* <strong>Mount Remote File Systems?</strong><br>
 Nothing to do here, so press <strong>Continue</strong>.
 
 #### :camera: It's recommended that you take a snaphot of the VM here...<br>
-* <strong>Mount Remote File Systems?</strong><br>
+* <strong>Review the Configuration</strong><br>
 Review your configuration and press <strong>Begin Installation</strong> to install Solaris 8 x86.
 <img src="./images/interactive-final-profile.png" alt="reviw" width="640px" height="auto"><br>
 
 #### Select <strong>Auto Reboot</strong> and the Installation Will Begin...<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./images/interactive-auto-reboot.png" alt="reviw" width="569px" height="auto"><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...right after you click the <strong>OK</strong> in one more information box after the above dialogue.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...right after you click the <strong>OK</strong> in one more information box after the above dialogue :wink:.<br>
 
 #### Some Installation Caps:
 * The installation to the first reboot takes about ½ hour or so.  Your mileage may vary...<br>
