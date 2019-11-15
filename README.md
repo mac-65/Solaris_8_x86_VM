@@ -1,14 +1,18 @@
+<img src="./svgs/B_NatVignetteOne.svg" alt="pretty" width="95%" height="auto">&nbsp;<br>
 <a name="top00"></a>![Guide](./svgs/mainTitle.svg)<br>
 
 This (hobby) project list the steps that I've used to build a Solaris 8 x86 virtual machine in VirtualBox.
 This guide was built from a number of sources that provided pieces of the puzzle, but not the complete picture
-of installing Solaris 8 x86 in VirtualBox.
-
+of installing Solaris 8 x86 in VirtualBox.<br>
 # Contents
 * [Introduction](#introduction)
 * [Disclaimer](#disclaimer)
 * [System & Software Requirements](#system-requirements)
 * [Getting Started](#getting-started)
+  * [Download the Solaris 8 x86 ISO Images](#get-isos)
+  * [Download the Solaris 8 x86 Recommended Patch Cluster(s)](#get-recommended)
+  * [Download the <code>tgcware</code>Prebuilt Packages](#get-tgcware)
+  * [Review the Scripts and Templates](#review-dot-scripts)
 * [VirtualBox Configuration](#virtualbox-configuration)
 * [Installing: First Boot](#installing-first-boot)
   * [Window System Configuraton](#video-device-selection)
@@ -150,10 +154,12 @@ It is recommended that you review each script and make any changes suited to
 your particular environment or needs.  The scripts are named as <code>001-gzip.sh</code>, etc.,
 so that <code>ls 0\*.sh</code> will list all of the scripts.
 
-#### 1. Download the ISOs
+<a name="get-isos"></a>
+#### 1. Download the Solaris 8 x86 ISO Images
 Use your browser or use <code>wget</code> to get the ISOs, e.g.<br>
 * <code>wget -c https://archive.org/download/sol-8-u7-ia/sol-8-u7-ia-v1.iso</code>
 
+<a name="get-recommended"></a>
 #### 2. Download the Solaris 8 x86 Recommended Patch Cluster(s)
 After you have downloaded the necessary
 [cluster patch](http://ftp.lanet.lv/ftp/unix/sun-info/sun-patches/8_x86_Recommended.zip)
@@ -161,26 +167,30 @@ and [112439-02](http://ftp.lanet.lv/ftp/unix/sun-info/sun-patches/112439-02.zip)
 make a copy of the files and uncompress all of the files.
 It will make the process easier and the install scripts provided assume that the packages are uncompressed.
 
-#### 3. Download the <code>tgcware</code> Packages
+<a name="get-tgcware"></a>
+#### 3. Download the <code>tgcware</code> Prebuilt Packages
 This guide provides a simple installation script for acquiring the pre-built packages
 from [tgcware](http://jupiterrise.com/tgcware/sunos5.8_x86/stable/).
 * Run the script <code>get_tgcware.sh -h</code> for usage instructions.
 
 The packages selected are meant as a starting point to build the
-Solaris 8 x86 box with a sane configuration: e.g. bash, vim, gcc, and openssl/openssh suite
-are installed with some other basic tools.
-<br>But, please feel free to change anything to your specific requirements/tastes.
+Solaris 8 x86 VM with a basic/sane configuration, e.g.:<br>
+<code>bash</code>, <code>vim</code>, <code>gcc</code>, and the <code>openssl</code>/<code>openssh</code>
+suite are installed along with other basic tools.<br>
+Please feel free to change anything to your specific requirements/tastes.
 
 All of the packages from [tgcware](http://jupiterrise.com/tgcware/sunos5.8_x86/stable/) are <code>.gz</code> files
 <i>except</i> for the [gzip](http://jupiterrise.com/tgcware/sunos5.8_x86/stable/gzip-1.6-1.tgc-sunos5.8-i386-tgcware) package
 (for obvious reasons).
 <br>Like with the patch files, copy and uncompress all of the pre-built software files.
 
-#### 4. Review the <code>bashrc</code> and <code>vimrc</code> . File Templates and <code>0\*.sh</code> Scripts
+<a name="review-dot-scripts"></a>
+#### 4. Review the <code>bashrc</code> and <code>vimrc</code> dot-file Templates and <code>0\*.sh</code> Scripts
 I've include some of my simple shell and vim hacks to get things started.
 <br>Put a copy of those files in the same location as all of the other files and
 the <code>0\*.sh</code> scripts as well.
 
+<a name="build-cd"></a>
 #### 5. Building the "tools" CD :cd:
 I decided, after a few install iterations, the easiest thing to do was to 
 create a CD ISO image containing all of the packages and scripts used to build the system.
@@ -426,8 +436,8 @@ Click <strong>Customize</strong>.<br><br>
 <a name="fs-history"></a>
 * <strong>Some Solaris FS history.</strong><br>
 For long forgotten reasons (at least I don't remember :innocent:), every vendor had their own particular<br>
-way of dealing with file systems on hard drives.  Sun microsystems was no different.  Hard drives<br>
-are split into 8 partitions and they're generally "hard-wired" with specific functions and as a good<br>
+way of dealing with file systems on hard drives.  Sun microsystems was no different.  Sun hard drives<br>
+are split into 8 partitions and they're generally "hard-wired" with specific usages.  As a good<br>
 rule of thumb, you should <strong>not</strong> change their meanings.  In simplist terms:<br>
   * the root <code>/</code> filesystem was set to be found on partition 0;
   * the <code>swap</code> filesystem was partition 1; and
