@@ -28,6 +28,7 @@ of installing Solaris 8 x86 in VirtualBox.<br>
   * [Customize the File System](#customize-fs)
     * [File System History, FYI](#fs-history)
 * [Installing: Reboot](#installing-reboot)
+  * [Enabling DMA (thanks [soltips](#https://sites.google.com/site/chitchatvmback/soltips#dma)](#enable-dma)
 * [Test Link](#install-console)
 
 ## Introduction
@@ -211,9 +212,9 @@ Solaris 8 will automatically detect when the ISO image is mounted through Virtua
 <a name="virtualbox-configuration"></a>
 # <span style="text-align:left;">VirtualBox Configuration<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 It's easier to show all of the screenshots of the VirtualBox setting that were used
-with notes as needed to clarify the process.<br>
+with notes as needed to clarify the process.
 After building the new machine (setting its name, memory, and hard drive), use these
-screen shots to perform the final setting that are needed.<br>
+screenshots to perform the final setting that are needed.
 Items that are not show are settings that don't affect the outcome
 (e.g., whether the <strong>Shared Clipboard</strong> is enabled, etc.)
 
@@ -240,6 +241,8 @@ memory using PAE if you want to go above a 4 gigabyte memory configuration.
 
 #### Display
 * I don't know if <strong>Enable 3D Acceleration</strong> actually helps (doesn't hurt, though).<br>
+I believe Solaris 8 x86 ships with OpenGL 1.3, but I'm not sure how well
+intregration is with VirtualBox.<br>
 The video memory size is just a guess and should be okay.<br>
 ![Display settings](./images/VirtualBox-0005.png)<br>
 
@@ -483,9 +486,43 @@ After the first part of the installaton has finished, the system is rebooted to 
 Solaris Device Configuration Assistant.<br>
 <img src="./images/reboot-001.png" alt="Rebooted screen" width="720px" height="auto"><br>
 Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%">
-to continue the booting process.<br>
-The <strong>Identified Devices</strong>
+to continue with the device identification.<br>
 
+<a name="enable-dma"></a>
+### <span style="text-align:left;">Enable DMA<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+* Solaris disables DMA and this makes disk access noticably slower in the VM.<br>
+Enable DMA using the following steps (starting from the <strong>Identified Devices</strong> screen):<br>
+<img src="./images/firstBoot-002.png" alt="firstBoot-002" width="720px" height="auto"><br>
+Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to load the <code>ata.bef</code> driver.
+
+* <strong>Boot Solaris</strong><br>
+At the Boot Solaris screen, press <strong>F4</strong> to enter the <strong>Boot Tasks</strong> screen.<br>
+Select <strong>View/Edit Property Settings</strong> and press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%">.<br>
+<img src="./images/reboot-002-boot_tasks.png" alt="reboot-002" width="720px" height="auto"><br>
+* <strong>Select the <code>ata-dma-enabled</code> Entry</strong><br>
+Navigate to the ata-dma-enabled entry,
+press <strong>SPACE</strong> (or 'X') then press <strong>F3</strong> to edit its value to "1".<br>
+<img src="./images/reboot-003-boot_tasks.png" alt="Change DMA property" width="720px" height="auto"><br>
+After entering "1", press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> <strong>twice</strong>, then press <strong>F3</strong> to return to the <strong>Boot Solaris</strong> screen.<br>
+
+* <strong>Boot Solaris</strong><br>
+Now we're ready to boot from the hard drive.<br>
+Select DISK and press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to boot from the newly installed Solaris 8 VM.
+<img src="./images/reboot-002.png" alt="Select DISK boot device" width="720px" height="auto"><br>
+* <strong>Root password</strong><br>
+At the <code>&lt;&lt;&lt; Current Boot Parameters &gt;&gt;&gt;</code> screen, press <strong>RETURN</strong> to boot.
+After the VM boots<br>
+(it'll take a bit for the <i>RPC timed out</i> message to appear), enter the Root password and confirm.
+
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> at the <strong>Identified Devices</strong> screen.
+
+At this point we're using the hard to boot and not the ISO image.  Select <strong>DISK:</strong> then press <strong>F4<strong><br>
+<img src="./images/reboot-002.png" alt="reboot-002" width="720px" height="auto"><br>
 
 
 <style
