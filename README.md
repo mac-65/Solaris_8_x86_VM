@@ -28,7 +28,7 @@ of installing Solaris 8 x86 in VirtualBox.<br>
   * [Customize the File System](#customize-fs)
     * [File System History, FYI](#fs-history)
 * [Installing: Reboot](#installing-reboot)
-  * [Enabling DMA](#enable-dma) (thanks [soltips](#https://sites.google.com/site/chitchatvmback/soltips#dma))
+  * [Enabling DMA](#enable-dma) (thanks [soltips](https://sites.google.com/site/chitchatvmback/soltips#dma))
 * [Test Link](#install-console)
 
 ## Introduction
