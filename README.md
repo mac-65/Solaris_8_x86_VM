@@ -28,7 +28,7 @@ of installing Solaris 8 x86 in VirtualBox.<br>
   * [Customize the File System](#customize-fs)
     * [File System History, FYI](#fs-history)
 * [Installing: Reboot](#installing-reboot)
-  * [Enabling DMA](#enable-dma) (thanks to [soltips](https://sites.google.com/site/chitchatvmback/soltips#dma))
+  * [Enabling DMA Fix](#enable-dma) (thanks to [soltips](https://sites.google.com/site/chitchatvmback/soltips#dma))
   * [Launcher Issue Fix](#fix-launcher) (<code>/etc/init.d/webstart</code>)
 * [Test Link](#install-console)
 
@@ -518,36 +518,37 @@ the GUI will fail and leave the system in a reboot only state.
 We'll fix that in <strong>maintenance mode</strong> in order<br>
 to get past this step and finish the installation.
   * At the <code>&lt;&lt;&lt; Current Boot Parameters &gt;&gt;&gt;</code> screen and at the
-<code>Select (b)oot or (i)nterperter:</code> prompt,<br>
-enter <strong>b -s</strong> and press <strong>RETURN</strong> to boot into maintenance mode.<br>
+<code>Select (b)oot or (i)nterperter:</code><br>
+prompt, enter <strong>b -s</strong> and press <strong>RETURN</strong> to boot into maintenance mode.<br>
   * There's no root password set yet, so just press <strong>RETURN</strong> to get to a shell prompt.<br>
   * Enter <code>vi /etc/init.d/webstart</code> and look for the line <strong><code>CUI=</code></strong>.<br>
     Change the line to read <code>CUI=</code><strong>yes</strong>.  Save the file and quit the editor.<br>
-  * Enter <code>exit</code> to leave the shell to contine the boot into multi-user mode.<br>
+  * Enter <code>exit</code> to leave the shell to continue the boot into multi-user mode.<br>
 
 * <strong>Root password</strong><br>
 After the VM boots
 (after the <i>RPC timed out</i> message to appear), enter the Root password and confirm.
 
 * <strong>Mount the Second CD</strong><br>
-Since the installation is not complete, the installer will ask where the media is for the 2nd CD.  Use the<br>
-VM's VirtualBox Setting to eject the current CD media and mount the <strong>sol-8-u7-ia-v2.iso</strong> media.<br>
-Then enter <code>1</code> and press <strong>ENTER</strong>.<br>
+Since the installation is not complete, the installer will ask where the media is for the 2nd CD.  Enter <code>1</code><br>
+and press <strong>ENTER</strong>.  The installer will <i>always</i> eject the current media
+and prompt you to insert the CD/DVD<br>
+for <strong>Solaris 8 Software 2 of 2 (2/02 Intel Platform Edition)</strong>.<br>
+Use the VM's VirtualBox Setting to eject the current CD media and mount the <strong>sol-8-u7-ia-v2.iso</strong> media.<br>
 <img src="./images/insert-disk-2.png" alt="insert DISK #2" width="728px" height="auto"><br>
+The message "Reading Solaris 8 Software 2 of 2 (2/02 Intel Platform Edition)..." will be displayed.<br>
+
+* </strong>Finish the installation following the prompts.</strong>
+No special steps are necessary, pretty straightforward.
+
+### </strong>Reboot after the installation is complete.</strong>
+Press <strong>RETURN</strong> to reboot!
+
+
+
+
 
 <br><br><br><br>
-
-
-
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-* <strong>Root password</strong><br>
-Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> at the <strong>Identified Devices</strong> screen.
-
-At this point we're using the hard to boot and not the ISO image.  Select <strong>DISK:</strong> then press <strong>F4<strong><br>
-<img src="./images/reboot-002.png" alt="reboot-002" width="720px" height="auto"><br>
-
 
 <style
   type="text/css">
@@ -556,7 +557,6 @@ At this point we're using the hard to boot and not the ISO image.  Select <stron
   h3 {font-family: "Comic Sans MS", Arial, Helvetica, sans-serif; color: #0000D0;}
 </style>
 okay
-
 
 
 #### :camera: It's recommended that you take a snaphot of the VM here...<br>
