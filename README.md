@@ -28,7 +28,8 @@ of installing Solaris 8 x86 in VirtualBox.<br>
   * [Customize the File System](#customize-fs)
     * [File System History, FYI](#fs-history)
 * [Installing: Reboot](#installing-reboot)
-  * [Enabling DMA](#enable-dma) (thanks [soltips](https://sites.google.com/site/chitchatvmback/soltips#dma))
+  * [Enabling DMA](#enable-dma) (thanks to [soltips](https://sites.google.com/site/chitchatvmback/soltips#dma))
+  * [Launcher Issue Fix](#fix-launcher) (<code>/etc/init.d/webstart</code>)
 * [Test Link](#install-console)
 
 ## Introduction
@@ -505,20 +506,43 @@ press <strong>SPACE</strong> (or 'X') then press <strong>F3</strong> to edit its
 <img src="./images/reboot-003-boot_tasks.png" alt="Change DMA property" width="720px" height="auto"><br>
 After entering "1", press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> <strong>twice</strong>, then press <strong>F3</strong> to return to the <strong>Boot Solaris</strong> screen.<br>
 
-* <strong>Boot Solaris</strong><br>
+* <strong>Boot Solaris</strong> (2nd time)<br>
 Now we're ready to boot from the hard drive.<br>
-Select DISK and press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to boot from the newly installed Solaris 8 VM.
+Select the <strong>DISK:</strong> device and press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to boot from the newly installed Solaris 8 VM.
 <img src="./images/reboot-002.png" alt="Select DISK boot device" width="720px" height="auto"><br>
+
+<a name="fix-launcher"></a>
+* <strong>Launcher Issue Fix</strong><br>
+On systems with a limited display (like the VM in VirtualBox), there's an annoying Launcher bug where<br>
+the GUI will fail and leave the system in a reboot only state.
+We'll fix that in <strong>maintenance mode</strong> in order<br>
+to get past this step and finish the installation.
+  * At the <code>&lt;&lt;&lt; Current Boot Parameters &gt;&gt;&gt;</code> screen and at the
+<code>Select (b)oot or (i)nterperter:</code> prompt,<br>
+enter <strong>b -s</strong> and press <strong>RETURN</strong> to boot into maintenance mode.<br>
+  * There's no root password set yet, so just press <strong>RETURN</strong> to get to a shell prompt.<br>
+  * Enter <code>vi /etc/init.d/webstart</code> and look for the line <strong><code>CUI=</code></strong>.<br>
+    Change the line to read <code>CUI=</code><strong>yes</strong>.  Save the file and quit the editor.<br>
+  * Enter <code>exit</code> to leave the shell to contine the boot into multi-user mode.<br>
+
 * <strong>Root password</strong><br>
-At the <code>&lt;&lt;&lt; Current Boot Parameters &gt;&gt;&gt;</code> screen, press <strong>RETURN</strong> to boot.
-After the VM boots<br>
-(it'll take a bit for the <i>RPC timed out</i> message to appear), enter the Root password and confirm.
+After the VM boots
+(after the <i>RPC timed out</i> message to appear), enter the Root password and confirm.
+
+* <strong>Mount the Second CD</strong><br>
+Since the installation is not complete, the installer will ask where the media is for the 2nd CD.  Use the<br>
+VM's VirtualBox Setting to eject the current CD media and mount the <strong>sol-8-u7-ia-v2.iso</strong> media.<br>
+Then enter <code>1</code> and press <strong>ENTER</strong>.<br>
+<img src="./images/insert-disk-2.png" alt="insert DISK #2" width="728px" height="auto"><br>
+
+<br><br><br><br>
 
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
+* <strong>Root password</strong><br>
 Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> at the <strong>Identified Devices</strong> screen.
 
 At this point we're using the hard to boot and not the ISO image.  Select <strong>DISK:</strong> then press <strong>F4<strong><br>
