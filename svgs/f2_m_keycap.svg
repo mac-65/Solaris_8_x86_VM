@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 900 900">
+<defs>$
+  <linearGradient id="MyGradient" gradientTransform="rotate(-45)">$
+    <stop offset="5%" stop-color="#101010" />$
+    <stop offset="94%" stop-color="#787898" />$
+  </linearGradient>$
+</defs>
+  <g transform="matrix(1 0 0 -1 -72 632)">
+   <path fill="url(#MyGradient)"
+d="M903 -129q-4 -25 -10 -37q-19 -37 -59 -37h-683q-23 2 -34 7q-34 16 -34 61v696q2 24 7 35q16 35 61 35h683q23 0 34 -5q35 -16 35 -65v-690zM882 586q-6 10 -12 15q-18 15 -48 15h-671q-18 -4 -26 -9q-27 -16 -27 -49v-679q-3 -11 -3 -17q0 -17 16 -24l85 65
+q-8 -1 -11 0q-11 4 -11 22v569q7 18 13 27q19 28 46 28h534q15 1 24 -4.5t13 -23.5zM797 -67v94t0.5 144.5t1.5 178.5v30v25v20v16v12q0 43 -2 45q0 15 -13.5 25t-29.5 10l-438 1q-73 0 -105 -55q-10 -18 -18 -56v-490q0 -9 1 -13q6 -13 27 -13h544q5 0 13 3q19 8 19 23z
+" />
+  </g>
+
+  <g transform="matrix(1 0 0 1 148 580)">
+  <text font-size="28em" font-weight="bold" font-family="Arial, Helvetica, sans-serif" fill="#000000">F2</text>
+  </g>
+</svg>

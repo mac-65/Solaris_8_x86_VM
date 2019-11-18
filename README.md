@@ -1,12 +1,12 @@
 <img src="./svgs/B_NatVignetteOne.svg" alt="pretty" width="95%" height="auto">&nbsp;<br>
 <a name="top00"></a>![Guide](./svgs/mainTitle.svg)<br>
 
-This (hobby) project list the steps that I've used to build a Solaris 8 x86 virtual machine in VirtualBox.
+This (hobby) project list the steps that I've used to build a Solaris 8 x86 virtual machine in VirtualBox.<br>
 This guide was built from a number of sources that provided pieces of the puzzle, but not the complete picture
 of installing Solaris 8 x86 in VirtualBox.<br>
 # Contents
 * [Introduction](#introduction)
-* [Disclaimer](#disclaimer)
+  * [Disclaimer](#disclaimer)
 * [System & Software Requirements](#system-requirements)
   * [VirtualBox <code>4.3.32-1</code>](#virtualbox-rpmfusion)
 * [Getting Started](#getting-started)
@@ -69,7 +69,7 @@ I searched many dozens of sites for answers, the major sites are listed in
 these steps, TODO
 
 <a name="disclaimer"></a>
-## <span style="text-align:left;">Disclaimer<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+### <span style="text-align:left;">Disclaimer<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 ![Software is provided "as is" and "with all faults."](./svgs/disclaimer.svg)
 THE AUTHOR makes no representations or warranties of any kind concerning the safety, suitability,
 lack of viruses, inaccuracies, typographical errors, or other harmful components of SOFTWARE in this guide.
@@ -278,7 +278,7 @@ This is where a few non-obvious steps are taken to ensure a good build.
 * Start the virtual machine.
 You should see a brief booting screen followed by the following screen --<br>
 ![First Boot 01](./images/firstBoot-001.png)<br>
-Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%">
+Press <strong><img src="./svgs/f2_m_keycap.svg" width="30" alt="F2"></strong>
 to continue the booting process.<br>
 The <strong>Scanning Devices</strong> screen with a text-based progress bar will be displayed.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./images/firstBoot-001-scan.png" alt="incomplete device list" width="540" height="auto"><br>
@@ -292,14 +292,14 @@ If the Identified Devices screen looks like the above, then the most likely caus
 Power off the VM and review the above settings screens [:up:](#virtualbox-configuration).
 Then boot the VM again and ensure it's correct.<br>
 
-* If everything looks okay, then press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%">
+* If everything looks okay, then press <strong><img src="./svgs/f2_m_keycap.svg" width="30" alt="F2"></strong>
 to the next steps of the booting process.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./images/firstBoot-003-loading_ata.png" alt="incomplete device list" width="540" height="auto"><br>
 
 * After the driver is loaded the <strong>Boot Solaris</strong> screen appears.<br>
 Navigate using the arrow keys, then press SPACE to selct the CD device to boot Solaris 8.<br>
 <img src="./images/firstBoot-004-boot_from_device.png" alt="firstBoot-002" width="720px" height="auto"><br>
-Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to boot Solaris 8 and start the installation.
+Press <strong><img src="./svgs/f2_m_keycap.svg" width="30" alt="F2"></strong> to boot Solaris 8 and start the installation.
 
 * After the driver is loaded the <strong>Boot Solaris</strong> screen appears.<br>
 <img src="./images/firstBoot-005-interactive.png" alt="select-interactive" width="720px" height="auto"><br>
@@ -309,14 +309,14 @@ Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to boot So
 * Perform the installation - select the language, etc. (only the interesting screens will be shown).<br>
 <img src="./images/firstBoot-007-start_install.png" alt="firstBoot-002" width="720px" height="auto"><br><br>
 <img src="./images/install-001.png" alt="install-001" width="720px" height="auto"><br>
-Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to continue the installation.<br>
+Press <strong><img src="./svgs/f2_m_keycap.svg" width="30" alt="F2"></strong> to continue the installation.<br>
 
 * You'll need to tell the installer about the video device.<br>
 A lot of steps are necessary to get a usable video configuration.<br>
 <img src="./images/install-002-kdmconfig.png" alt="install-002" width="720px" height="auto"><br>
-Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to continue the installation.<br><br>
+Press <strong><img src="./svgs/f2_m_keycap.svg" width="30" alt="F2"></strong> to continue the installation.<br><br>
 <img src="./images/install-002-kdmconfig-2.png" alt="install-002" width="720px" height="auto"><br>
-Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to continue the installation.<br>
+Press <strong><img src="./svgs/f2_m_keycap.svg" width="30" alt="F2"></strong> to continue the installation.<br>
 
 <a name="video-device-selection"></a>
 # <span style="text-align:left;">Window System Configuraton<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
@@ -325,33 +325,33 @@ Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to continu
 There are *a lot* of video devices listed, unfortunately only the first two are available.<br>
 I selected the second option just to get a little more useable screen (even with the panning).<br>
 <img src="./images/install-002-kdmconfig-3.png" alt="install-002" width="720px" height="auto"><br>
-Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to continue.<br>
+Press <strong><img src="./svgs/f2_m_keycap.svg" width="30" alt="F2"></strong> to continue.<br>
 
 * <strong>Monitor Type Selection</strong><br>
 I _think_ any *MultiFrequency* monitor will work, just pick the first.<br>
 <img src="./images/install-002-kdmconfig-4.png" alt="install-002" width="720px" height="auto"><br>
-Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to continue.<br>
+Press <strong><img src="./svgs/f2_m_keycap.svg" width="30" alt="F2"></strong> to continue.<br>
 
 * <strong>Screen Size Selection</strong><br>
 Any size should work, I selected a 17-inch.<br>
 <img src="./images/install-002-kdmconfig-5.png" alt="install-002" width="720px" height="auto"><br>
-Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to continue.<br>
+Press <strong><img src="./svgs/f2_m_keycap.svg" width="30" alt="F2"></strong> to continue.<br>
 
 * <strong>Virtual Screen Resolution Selection</strong><br>
 Because panning was selected, select the panning size.<br>
 <img src="./images/install-002-kdmconfig-6.png" alt="install-002" width="720px" height="auto"><br>
-Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to continue.<br>
+Press <strong><img src="./svgs/f2_m_keycap.svg" width="30" alt="F2"></strong> to continue.<br>
 
 <a name="view-and-edit"></a>
 * <strong><code>kdmconfig</code>:: View and Edit Window System Configuration</strong><br>
 The installer will allow you to continue.<br>
 <img src="./images/install-002-kdmconfig-final.png" alt="install-002" width="720px" height="auto"><br>
-Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to continue.<br>
+Press <strong><img src="./svgs/f2_m_keycap.svg" width="30" alt="F2"></strong> to continue.<br>
 
 * <strong><code>kdmconfig</code>:: Window System Configuration Test</strong><br>
 Make sure everything works.<br>
 <img src="./images/install-002-kdmconfig-test.png" alt="test-001" width="720px" height="auto"><br>
-Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to perform the display test.<br><br>
+Press <strong><img src="./svgs/f2_m_keycap.svg" width="30" alt="F2"></strong> to perform the display test.<br><br>
 <img src="./images/install-002-kdmconfig-test-1.png" alt="test-002" width="720px" height="auto"><br>
 * If you see the above image, then the Window System Configuration was successful.<br>
 Note, not all of the colors _work_ (agree with their label), but this is how it looks.<br>
@@ -486,33 +486,32 @@ Review your configuration and press <strong>Begin Installation</strong> to insta
 After the first part of the installaton has finished, the system is rebooted to the<br>
 Solaris Device Configuration Assistant.<br>
 <img src="./images/reboot-001.png" alt="Rebooted screen" width="720px" height="auto"><br>
-Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%">
+Press <strong><img src="./svgs/f2_m_keycap.svg" width="30" alt="F2"></strong>
 to continue with the device identification.<br>
 
 <a name="enable-dma"></a>
-### <span style="text-align:left;">Enable DMA<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+### <span style="text-align:left;">Enable DMA Fix<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 * Solaris disables DMA and this makes disk access noticably slower in the VM.<br>
 Enable DMA using the following steps (starting from the <strong>Identified Devices</strong> screen):<br>
 <img src="./images/firstBoot-002.png" alt="firstBoot-002" width="720px" height="auto"><br>
-Press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to load the <code>ata.bef</code> driver.
+Press <strong><img src="./svgs/f2_m_keycap.svg" width="30" alt="F2"></strong> to load the <code>ata.bef</code> driver.
 
-* <strong>Boot Solaris</strong><br>
-At the Boot Solaris screen, press <strong>F4</strong> to enter the <strong>Boot Tasks</strong> screen.<br>
-Select <strong>View/Edit Property Settings</strong> and press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%">.<br>
+* At the <strong>Boot Solaris</strong> screen, press <strong>F4</strong> to enter the <strong>Boot Tasks</strong> screen.<br>
+Select <strong>View/Edit Property Settings</strong> and press <strong><img src="./svgs/f2_m_keycap.svg" width="30" alt="F2"></strong>.<br>
 <img src="./images/reboot-002-boot_tasks.png" alt="reboot-002" width="720px" height="auto"><br>
 * <strong>Select the <code>ata-dma-enabled</code> Entry</strong><br>
 Navigate to the ata-dma-enabled entry,
 press <strong>SPACE</strong> (or 'X') then press <strong>F3</strong> to edit its value to "1".<br>
 <img src="./images/reboot-003-boot_tasks.png" alt="Change DMA property" width="720px" height="auto"><br>
-After entering "1", press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> <strong>twice</strong>, then press <strong>F3</strong> to return to the <strong>Boot Solaris</strong> screen.<br>
+After entering "1", press <strong><img src="./svgs/f2_m_keycap.svg" width="30" alt="F2"></strong> <strong>twice</strong>, then press <strong>F3</strong> to return to the <strong>Boot Solaris</strong> screen.<br>
 
 * <strong>Boot Solaris</strong> (2nd time)<br>
 Now we're ready to boot from the hard drive.<br>
-Select the <strong>DISK:</strong> device and press <img src="./images/f2_key.png" alt="F2" width="3%" height="3%"> to boot from the newly installed Solaris 8 VM.
+Select the <strong>DISK:</strong> device and press <strong><img src="./svgs/f2_m_keycap.svg" width="30" alt="F2"></strong> to boot from the newly installed Solaris 8 VM.
 <img src="./images/reboot-002.png" alt="Select DISK boot device" width="720px" height="auto"><br>
 
 <a name="fix-launcher"></a>
-* <strong>Launcher Issue Fix</strong><br>
+### <span style="text-align:left;">Launcher Issue Fix<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 On systems with a limited display (like the VM in VirtualBox), there's an annoying Launcher bug where<br>
 the GUI will fail and leave the system in a reboot only state.
 We'll fix that in <strong>maintenance mode</strong> in order<br>
@@ -527,7 +526,7 @@ prompt, enter <strong>b -s</strong> and press <strong>RETURN</strong> to boot in
 
 * <strong>Root password</strong><br>
 After the VM boots
-(after the <i>RPC timed out</i> message to appear), enter the Root password and confirm.
+(and after the <i>RPC timed out</i> message appears), enter the Root password and confirm.
 
 * <strong>Mount the Second CD</strong><br>
 Since the installation is not complete, the installer will ask where the media is for the 2nd CD.  Enter <code>1</code><br>
