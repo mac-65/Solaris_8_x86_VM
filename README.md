@@ -4,6 +4,7 @@
 This (hobby) project list the steps that I've used to build a Solaris 8 x86 virtual machine in VirtualBox.<br>
 This guide was built from a number of sources that provided pieces of the puzzle, but not the complete picture
 of installing Solaris 8 x86 in VirtualBox.<br>
+
 # Contents
 * [Introduction](#introduction)
   * [Disclaimer](#disclaimer)

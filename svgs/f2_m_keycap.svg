@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 900 900">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 -20 900 900">
 <defs>$
   <linearGradient id="MyGradient" gradientTransform="rotate(-45)">$
     <stop offset="5%" stop-color="#101010" />$
-    <stop offset="94%" stop-color="#787898" />$
+    <stop offset="75%" stop-color="#82829d" />$
   </linearGradient>$
 </defs>
   <g transform="matrix(1 0 0 -1 -72 632)">
@@ -12,7 +12,7 @@ q-8 -1 -11 0q-11 4 -11 22v569q7 18 13 27q19 28 46 28h534q15 1 24 -4.5t13 -23.5zM
 " />
   </g>
 
-  <g transform="matrix(1 0 0 1 148 580)">
+  <g transform="matrix(1 0 0 1 152 580)">
   <text font-size="28em" font-weight="bold" font-family="Arial, Helvetica, sans-serif" fill="#000000">F2</text>
   </g>
 </svg>
