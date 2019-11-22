@@ -199,10 +199,7 @@ the <code>0\*.sh</code> scripts as well.
 <a name="build-cd"></a>
 #### 5. Building the "tools" CD :cd:
 I decided, after a few install iterations, the easiest thing to do was to 
-create a CD ISO image containing all of the packages and scripts used to build the system.
-I emphasize a CD volume because I'm not sure if Solaris 8 "knows" about DVD file systems;
-if it can, then use whatever format you want (although most burners will select the
-format automatically based on the size of the image to create).<br>
+create an ISO image containing all of the packages and scripts used to build the system.<br>
 Note, <i>you don't actually need to burn a CD</i>, just use whatever software to create a CD image file
 that can be mounted in VirtualBox.  I used <strong>K3b</strong>.
 Solaris 8 will automatically detect when the ISO image is mounted through VirtualBox
