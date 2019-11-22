@@ -15,6 +15,7 @@
 ATTR_OFF="`tput sgr0`" ;
 ATTR_BOLD="${ATTR_OFF}`tput bold`" ; # shelltool has no support for attributes :(.
 ATTR_RED_BOLD="${ATTR_OFF}`tput setaf 1; tput bold`" ;
+ATTR_GREEN="${ATTR_OFF}`tput setaf 2`" ;
 ATTR_GREEN_BOLD="${ATTR_OFF}`tput setaf 2; tput bold`" ;
 ATTR_YELLOW="${ATTR_OFF}`tput setaf 3`" ;
 ATTR_BLUE_BOLD="${ATTR_OFF}`tput setaf 4; tput bold`" ;
@@ -59,7 +60,8 @@ if [ "${ANS}" = 'y' ] ; then # {
  # to complete the installation of the recommended patches.   #
  #                                                            #
  # If 112439 was added (showrev -p), the links will be built  #
- # for '/dev/random' and '/dev/urandom'.                      #
+ # for '/dev/random' & '/dev/urandom' since the installation  #
+ # of 112439 does NOT do it (at least in the VM).             #
  #                                                            #
  # ${ATTR_RED_BOLD}A REBOOT SHOULD BE DONE TO ENSURE THE PATCHES TAKE EFFECT.`tput sgr0` #
  ##############################################################
@@ -133,37 +135,39 @@ HERE_DOC
          SLEEP_TIME=${PKG_DELAY} ;
          RC=`cat /root/RC$$` ;
          echo "RC = ${RC}" >> "${PKG_LOG_FILE}" ;
+
+         printf "${RC}, " ;
          case $RC in
-           0) printf "${ATTR_GREEN_BOLD}%s - ${ATTR_BLUE_BOLD}%s${ATTR_OFF}\n" \
+           0) printf "${ATTR_GREEN}%s - ${ATTR_BLUE_BOLD}%s${ATTR_OFF}\n" \
                 'SUCCESS' "${patch_dir}/${patch}" ;
               ;;
            ####################################################################
-           # We'll see 4 if the package was already installed (so it seems).
-           4) printf "${RC}, ${ATTR_YELLOW}%s - ${ATTR_BLUE_BOLD}%s${ATTR_OFF}\n" \
+           # We'll see '4' if the package was already installed (so it seems).
+           [24]) printf "${ATTR_YELLOW}%s - ${ATTR_BLUE_BOLD}%s${ATTR_OFF}\n" \
                 'ALREADY INSTALLED' "${patch_dir}/${patch}" ;
               PKG_ERRS=`expr ${PKG_ERRS} + 1` ;
               ;;
-           6) printf "${RC}, ${ATTR_YELLOW}%s - ${ATTR_BLUE_BOLD}%s${ATTR_OFF}\n" \
+           6) printf "${ATTR_YELLOW}%s - ${ATTR_BLUE_BOLD}%s${ATTR_OFF}\n" \
                 'OBSOLETE' "${patch_dir}/${patch}" ;
               PKG_ERRS=`expr ${PKG_ERRS} + 1` ;
               ;;
-           8) printf "${RC}, ${ATTR_YELLOW}%s - ${ATTR_CYAN_BOLD}%s${ATTR_OFF}\n" \
+           8) printf "${ATTR_YELLOW}%s - ${ATTR_CYAN_BOLD}%s${ATTR_OFF}\n" \
                 'NOT INSTALLED' "${patch_dir}/${patch}" ;
               PKG_ERRS=`expr ${PKG_ERRS} + 1` ;
               ;;
-           13) printf "${RC}, ${ATTR_YELLOW}%s - ${ATTR_CYAN_BOLD}%s${ATTR_OFF}\n" \
+           13) printf "${ATTR_YELLOW}%s - ${ATTR_CYAN_BOLD}%s${ATTR_OFF}\n" \
                 'SYMBOLIC LINK?' "${patch_dir}/${patch}" ;
               PKG_ERRS=`expr ${PKG_ERRS} + 1` ;
               ;;
-           18) printf "${RC}, ${ATTR_RED_BOLD}%s - ${ATTR_BOLD}%s${ATTR_OFF}\n" \
+           18) printf "${ATTR_RED_BOLD}%s - ${ATTR_BOLD}%s${ATTR_OFF}\n" \
                 'NO DISK SPACE' "${patch_dir}/${patch}" ;
               PKG_ERRS=`expr ${PKG_ERRS} + 1` ;
               ;;
-           25) printf "${RC}, ${ATTR_CYAN_BOLD}%s - ${ATTR_CYAN_BOLD}%s${ATTR_OFF}\n" \
+           25) printf "${ATTR_CYAN_BOLD}%s - ${ATTR_CYAN_BOLD}%s${ATTR_OFF}\n" \
                 'MISSING DEPENDENCY' "${patch_dir}/${patch}" ;
               PKG_ERRS=`expr ${PKG_ERRS} + 1` ;
               ;;
-           *) printf "${RC}, ${ATTR_RED_BOLD}%s - ${ATTR_BOLD}%s${ATTR_OFF}\n" \
+           *) printf "${ATTR_RED_BOLD}%s - ${ATTR_BOLD}%s${ATTR_OFF}\n" \
                 'ERROR' "${patch_dir}/${patch}" ;
               SLEEP_TIME=5 ;
               PKG_ERRS=`expr ${PKG_ERRS} + 1` ;
@@ -173,6 +177,28 @@ HERE_DOC
        done
     done
    done # }
+
+   ############################################################################
+   # Build the links for '/dev/random' and '/dev/urandom' if 112439 present.
+   # We can do everything EXCEPT /usr/sbin/drvconfig (which caused a kernel
+   # panic) probably because we had to reboot first).
+   #
+   showrev -p | ${GREP} -q 112439 ; RC=$? ;
+   if [ ${RC} -eq 0 -a ! -h /dev/random ] ; then
+     printf 'FIXING :: /dev/random and /dev/urandom ...\n' ;
+     /usr/sbin/rem_drv random ;
+     /bin/rm -f /dev/*random ;
+     /usr/sbin/add_drv -m '* 644 root sys' random ; # Adds the pseudo devices
+ ### /usr/sbin/drvconfig
+     ( cd /dev ; ln -s '/devices/pseudo/random@0:random' random ;
+                 ln -s '/devices/pseudo/random@0:urandom' urandom )
+     ls -ld /dev/*random | cut -c54- \
+        | sed -e "s/^/${ATTR_GREEN}SUCCESS${ATTR_OFF} ==>/" ;
+     echo ;
+   else
+     printf "${ATTR_RED_BOLD}%s${ATTR_OFF}\n\n" \
+            'Installation of 112439 has FAILED!' ;
+   fi
 
    ############################################################################
    #
