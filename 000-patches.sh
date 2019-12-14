@@ -42,7 +42,7 @@ PKG_LOG_FILE="/root/`basename $0 .sh`-log.txt" ;
 PKG_DELAY='' ;
 PKG_TALLY=0 ;
 PKG_NONZERO=0 ;
-PKG_ERRS=0 ;
+PKG_FATALS=0 ;
 
 PART=1;
 PART_MSG="`tput setaf 2`START`tput sgr0`" ;
@@ -100,7 +100,6 @@ HERE_DOC
 
     ###########################################################################
     # We copy things because we lose the mount point for the ISO in 'S' mode.
-    # It does not seem like many actually apply in '8_x86_Recommended', but
     # 'J2SE_Solaris_8_x86_Recommended' has 112439 which is needed for ssl/ssh.
     #
     printf "${ATTR_BOLD}%s${ATTR_OFF}.." 'Copying files' ;
@@ -110,7 +109,6 @@ HERE_DOC
                J2SE_Solaris_8_x86_Recommended \
                000-patches.sh                 \
                pkgadd-admin                   \
-               snippets.sh                    \
         ; do
       printf "${ATTR_CYAN_BOLD}%s${ATTR_OFF} .." "${pkg}" ;
         tar cf - "${pkg}" | ( cd /root && tar xf - ) ;
@@ -169,13 +167,13 @@ HERE_DOC
          echo '#############################################' ; } \
            >> "${PKG_LOG_FILE}" ;
 
-         { /usr/sbin/pkgadd -a /root/pkgadd-admin -d "${patch_dev}" ${patch} ;
-           RC=$? ; echo ${RC} > /root/RC$$ ;
+         { ${PKGADD} -a ${PKGADD_ADMIN} -d "${patch_dev}" ${patch} ;
+           RC=$? ; echo ${RC} > /tmp/RC$$ ;
          } 2>&1 | tee -a "${PKG_LOG_FILE}" ;
 
          SLEEP_TIME=${PKG_DELAY} ;
 
-         RC=`cat /root/RC$$` ;
+         RC=`cat /tmp/RC$$` ;
          printf "${RC}, " ;
 
          case $RC in
@@ -212,9 +210,10 @@ HERE_DOC
               printf "${ATTR_RED_BOLD}%s - ${ATTR_BOLD}%s${ATTR_OFF}\n" \
                 'ERROR' "${patch_dir}/${patch}" ;
               SLEEP_TIME=3 ;
-              PKG_ERRS=`expr ${PKG_ERRS} + 1` ;
+              PKG_FATALS=`expr ${PKG_FATALS} + 1` ;
               ;;
          esac
+
          echo "RC = ${RC}" >> "${PKG_LOG_FILE}" ;
 
          if [ "${SLEEP_TIME}" != '' ] ; then sleep "${SLEEP_TIME}" ; fi
@@ -235,6 +234,7 @@ HERE_DOC
    done # }
 
    ############################################################################
+   ############################################################################
    #
   cat << HERE_DOC
 `tput smso; tput bold`/************************************\\
@@ -242,7 +242,7 @@ HERE_DOC
 **  ALL PATCHES HAVE BEEN APPLIED.  **
 **  `printf '%3d' ${PKG_TALLY}` packages were processed:    **
 **  `printf '%3d' ${PKG_NONZERO}` had a non-zero status,      **
-**  `printf '%3d' ${PKG_ERRS}` had a fatal error status.   **
+**  `printf '%3d' ${PKG_FATALS}` had a fatal error status.   **
 **************************************
 \************************************/`tput sgr0`
 

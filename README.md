@@ -240,8 +240,7 @@ memory using PAE if you want to go above a 4 gigabyte memory configuration.
 
 #### Display
 * I don't know if <strong>Enable 3D Acceleration</strong> actually helps (doesn't hurt, though).<br>
-I believe Solaris 8 x86 ships with OpenGL 1.3, but I'm not sure how well
-intregration is with VirtualBox.<br>
+I believe Solaris 8 x86 ships with OpenGL 1.3, but I'm not sure how well integration is with VirtualBox.<br>
 The video memory size is just a guess and should be okay.<br>
 ![Display settings](./images/VirtualBox-0005.png)<br>
 
@@ -255,7 +254,7 @@ The video memory size is just a guess and should be okay.<br>
 
 #### Network
 * Ensure that the adapter type is set <strong>PCnet-PCI II (Am79C970A)</strong> (others may work, I haven't tried).<br>
-Multiple adaapters should work, but the network will require a different configuration (I believe)<br>
+Multiple adapters should work, but the network will require a different configuration (I believe)<br>
 and this guide does not cover those steps.<br>
 ![Network settings](./images/VirtualBox-0008.png)<br>
 
@@ -286,16 +285,16 @@ The <strong>Scanning Devices</strong> screen with a text-based progress bar will
 Ensure that it looks as close to this as possible and that none of the expected devices are missing or<br>
 "generically" identified (notice the missing <strong>ADS Sound Blaster</strong> and <strong>PCI: Ethernet controller</strong> entry). :arrow_lower_left:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./images/firstBoot-001-no_audio_device.png" alt="incomplete device list" width="540" height="auto"><br>
-If the Identified Devices screen looks like the above, then the most likely cause is that there's an incorrect setting in the VM.<br>
-Power off the VM and review the above settings screens [:up:](#virtualbox-configuration).
-Then boot the VM again and ensure it's correct.<br>
+If the <strong>Identified Devices</strong> screen looks like the above, then the most likely cause is that there's an incorrect<br>
+setting in the VM.  Power off the VM and review the above settings screens [:up:](#virtualbox-configuration).<br>
+After making any changes, boot the VM again and ensure it's correct.<br>
 
 * If everything looks okay, then press <strong><img src="./svgs/f2_m_keycap.svg" width="30" alt="F2"></strong>
 to the next steps of the booting process.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./images/firstBoot-003-loading_ata.png" alt="incomplete device list" width="540" height="auto"><br>
 
 * After the driver is loaded the <strong>Boot Solaris</strong> screen appears.<br>
-Navigate using the arrow keys, then press SPACE to selct the CD device to boot Solaris 8.<br>
+Navigate using the arrow keys, then press SPACE to select the CD device to boot Solaris 8.<br>
 <img src="./images/firstBoot-004-boot_from_device.png" alt="firstBoot-002" width="720px" height="auto"><br>
 Press <strong><img src="./svgs/f2_m_keycap.svg" width="30" alt="F2"></strong> to boot Solaris 8 and start the installation.
 
@@ -530,7 +529,7 @@ After the VM boots
 Since the installation is not complete, the installer will ask where the media is for the 2nd CD.  Enter <code>1</code><br>
 and press <strong>ENTER</strong>.  The installer will <i>always</i> eject the current media
 and prompt you to insert the CD/DVD<br>
-for <strong>Solaris 8 Software 2 of 2 (2/02 Intel Platform Edition)</strong>.<br>
+for the <strong>Solaris 8 Software 2 of 2 (2/02 Intel Platform Edition)</strong>.<br>
 Use the VM's VirtualBox Setting to eject the current CD media and mount the <strong>sol-8-u7-ia-v2.iso</strong> media.<br>
 <img src="./images/insert-disk-2.png" alt="insert DISK #2" width="728px" height="auto"><br>
 The message "Reading Solaris 8 Software 2 of 2 (2/02 Intel Platform Edition)..." will be displayed.<br>
@@ -538,8 +537,9 @@ The message "Reading Solaris 8 Software 2 of 2 (2/02 Intel Platform Edition)..."
 * </strong>Finish the installation following the prompts.</strong>
 No special steps are necessary, pretty straightforward.
 
-### </strong>Reboot after the installation is complete.</strong>
-Press <strong>RETURN</strong> to reboot!
+### <span style="text-align:left;">Reboot after the installation is complete.<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+* Press <strong>RETURN</strong> to reboot!<br>
+<img src="./images/complete-reboot.png" alt="REBOOT!" width="728px" height="auto"><br>
 
 
 
