@@ -28,9 +28,46 @@ exit 0;
 #    cd /root/RPMs/002-F24-yum/COMPLETED-002 && rpm -ivh *.rpm ;
 #
 # Now, Fedora 21's yum should be installed...
+#
+# EXTRA -- install 'yumex'
+#    cd /root/RPMs/002-F24-yum/COMPLETED-003 && rpm -ivh *.rpm ;
+#
+# yumex looks pretty good and seems to work just fine.
+#
+# SHAPSHOT
+#
+###############################################################################
+# yum erase rpm-python3 ; # This removes 'dnf' and some dependencies.
+# MAY NOT BE A GOOD IDEA...
+# Okay, seems like removing 'rpm-python3' prevented me from logging in after reboot.
+# Reverting to previous snapshot and rebooting verified the issue.
+# Doesn't seem like keeping dnf is going to hurt anything.
+#
+Removed:
+  rpm-python3.x86_64 0:4.13.0.1-1.fc24                                                                                                                                                            
+
+Dependency Removed:
+  abrt.x86_64 0:2.8.2-1.fc24                  abrt-addon-ccpp.x86_64 0:2.8.2-1.fc24     abrt-addon-kerneloops.x86_64 0:2.8.2-1.fc24    abrt-addon-pstoreoops.x86_64 0:2.8.2-1.fc24       
+  abrt-addon-python3.x86_64 0:2.8.2-1.fc24    abrt-addon-vmcore.x86_64 0:2.8.2-1.fc24   abrt-addon-xorg.x86_64 0:2.8.2-1.fc24          abrt-cli.x86_64 0:2.8.2-1.fc24                    
+  abrt-dbus.x86_64 0:2.8.2-1.fc24             abrt-desktop.x86_64 0:2.8.2-1.fc24        abrt-gui.x86_64 0:2.8.2-1.fc24                 abrt-java-connector.x86_64 0:1.1.0-8.fc24         
+  abrt-plugin-bodhi.x86_64 0:2.8.2-1.fc24     abrt-python3.x86_64 0:2.8.2-1.fc24        abrt-retrace-client.x86_64 0:2.8.2-1.fc24      abrt-tui.x86_64 0:2.8.2-1.fc24                    
+  anaconda.x86_64 0:24.13.7-1.fc24            anaconda-core.x86_64 0:24.13.7-1.fc24     anaconda-gui.x86_64 0:24.13.7-1.fc24           anaconda-tui.x86_64 0:24.13.7-1.fc24              
+  dnf.noarch 0:1.1.10-4.fc24                  dnf-langpacks.noarch 0:0.15.1-4.fc24      dnf-plugins-core.noarch 0:0.1.21-5.fc24        gnome-abrt.x86_64 0:1.2.4-3.fc24                  
+  libreport-python3.x86_64 0:2.7.2-1.fc24     python3-dnf.noarch 0:1.1.10-4.fc24        python3-dnf-langpacks.noarch 0:0.15.1-4.fc24   python3-dnf-plugins-core.noarch 0:0.1.21-5.fc24   
+  python3-meh.noarch 0:0.44-1.fc24            python3-meh-gui.noarch 0:0.44-1.fc24      setroubleshoot.x86_64 0:3.3.11-1.fc24          setroubleshoot-plugins.noarch 0:3.3.6-1.fc24      
+  setroubleshoot-server.x86_64 0:3.3.11-1.fc24
+###############################################################################
+# 
+# 100-F24-KDE_f21]# yum -y install --downloadonly --downloaddir=. kde-workspace-4.11.18-3.fc21.x86_64.rpm
+# STOPPING HERE.
+#
+# Looks like I can now get the missing packages from the F21 repo as Fedora 21's yum has identified ...
 
 
 
+###############################################################################
+###############################################################################
+###############################################################################
 # These are performed on F21 to get the packages for F24.
 
 # yum  reinstall --downloadonly --downloaddir=. pygpgme pyliblzma pycairo rpm-python python-requests python-kitchen urlgrabber python-iniparse pyxattr yum-metadata-parser pyxdg langtable-python langtable-data langtable python-xpyb python-six python-chardet python-urllib3 python-backports-ssl_match_hostname python-ndg_httpsclient python-pyasn1 python-pycurl pyOpenSSL dbus-python python-backports python-pexpect pygtk2 pygobject2
@@ -44,7 +81,7 @@ exit 0;
 
 
 
-#   yum -y erase anaconda-core langtable-python3
+#   yum -y erase anaconda-core langtable-python3 lua-socket lua-json lua-lpeg
 
 # yum erase lua-socket lua-json lua-lpeg
 #
