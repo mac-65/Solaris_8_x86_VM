@@ -42,8 +42,8 @@ Those Sun systems were my first real taste of Unix and 32-bit computing.<br>
 I remember that a [SPARCstation IPX](https://en.wikipedia.org/wiki/SPARCstation_IPX) was
 not fast enough to decode mp3 files.
 1152x900 8-bit color was state-of-the-art graphics
-(yes there were 24-bit cards available, e.g. <code>cgtwelve</code>, but they were expensive
-and very slow and not all of the software supported the 24 bit visuals).<br>
+(24-bit frame buffers were available, e.g. <strong>cgtwelve</strong>, but they were:
+expensive, very slow, and not all of the software supported the 24 bit visuals).<br>
 There's some interesting reading about framebuffers [here](http://www.sunhelp.org/faq/FrameBuffer.html).
 
 Once in a while, I need to do something in this olde OS, and
@@ -59,8 +59,13 @@ but after getting things to actually work was pretty satisfying and fun.
 
 #### Not Covered In This Guide
 * <strong>Graphics beyond VGA/SVGA</strong> (640x480 or 800×600 4-bit color depth)<br>
-Looks like it may be possible (and may be non-trivial).<br>
-I just haven't looked into it yet; probably ties in with Guest Additions.
+Looks like it may be possible (and may be non-trivial).
+I just haven't looked into it yet; probably ties in with Guest Additions.<br>
+Currently, I just ssh into the VM from my Fedora Desktop (running KDE) and when I actually
+need the Solaris 8 graphical desktop, the resolution and color depth are okay for my purposes.<br>
+Sadly, all of the links for
+[a third party SVGA driver](https://sites.google.com/site/chitchatvmback/soltips#svga)
+are dead.
 <!-- https://docs.oracle.com/cd/E97728_01/F12469/html/adv-config-linux-guest.html -->
 * <strong>Guest Additions:</strong><br>
 Shared clipboard, drag and drop, seamless mode, shared folders from host system, and theoretically better graphics<br>
@@ -68,14 +73,17 @@ I haven't looked into it at all.
 
 #### Acknowledgements and Attribution
 I searched many dozens of sites for answers, the major sites are listed in
-these steps, TODO
+these steps...<br>
+TODO :: This document is incomplete; someday I'll finish the last minor details.
 
 <a name="whats_new"></a>
-#### <span style="text-align:left;">What’s NEW<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+#### <span style="text-align:left;">What’s NEW 🔥<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 * [Latest Fedora 34 Release Tested](#latest_fedora_release)
-* gcc-4.7.4-2 has been added.<br>
+* Installation of <strong>gcc-4.7.4-2</strong> has been added.<br>
 As of November 2020, [jupiterrise.com](http://jupiterrise.com/tgcware/sunos5.8_x86/stable/) has added
-[gcc-4.7.4-2](https://jupiterrise.com/tgcware/sunos5.8_x86/stable/gcc-4.7.4-2.tgc-sunos5.8-i386-tgcware.gz)
+[gcc-4.7.4-2](https://jupiterrise.com/tgcware/sunos5.8_x86/stable/gcc-4.7.4-2.tgc-sunos5.8-i386-tgcware.gz)<br>
+A new script (<code>004-gcc-4.7.4-2.sh</code>)
+installs these packages (the GNU C and C++ compiler).
 
 <a name="disclaimer"></a>
 ### <span style="text-align:left;">Disclaimer<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
