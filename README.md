@@ -7,6 +7,7 @@ of installing Solaris 8 x86 in VirtualBox.<br>
 
 # Contents
 * [Introduction](#introduction)
+  * [What’s NEW](#whats_new)
   * [Disclaimer](#disclaimer)
 * [System & Software Requirements](#system-requirements)
   * [VirtualBox <code>4.3.32-1</code>](#virtualbox-rpmfusion)
@@ -69,6 +70,10 @@ I haven't looked into it at all.
 I searched many dozens of sites for answers, the major sites are listed in
 these steps, TODO
 
+<a name="whats_new"></a>
+#### <span style="text-align:left;">What’s NEW<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
+* [Latest Fedora release](#latest_fedora_release)
+
 <a name="disclaimer"></a>
 ### <span style="text-align:left;">Disclaimer<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 ![Software is provided "as is" and "with all faults."](./svgs/disclaimer.svg)
@@ -86,7 +91,7 @@ modifying, or distributing this SOFTWARE in this guide.<br>
 # <span style="text-align:left;">System & Software Requirements<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
 
 <a name="virtualbox-rpmfusion"></a>
-### RPMFusion VirtualBox
+### RPMFusion’s VirtualBox
 
 * The VirtualBox version is <code>4.3.32-1</code> (rpmfusion-free on <code>Fedora 21 x86_64, 4.1.13-100.fc21.x86_64</code>).<br>
 I've had later versions of VirtualBox crash and burn with some VMs I've built in the past.
@@ -94,7 +99,13 @@ It's a problem because as far as I know, it's not possible to <strong>easily</st
 installed on the same machine (like you can do with the gcc compiler collection, e.g.).
 There might be a way, but I haven't tried it and this version runs all of my VMs fine
 (although the creature comforts added in later versions are nice, but the VMs
-don't work).
+don't work).<br>
+<a name="latest_fedora_release"></a>
+* September 2021 - The VM runs under the latest <strong>Fedora 34</strong> release and VirtualBox
+(that is, after upgrading my Fedora release to Fedora 34 the Solaris 8 VM built from this guide ran
+without a hitch on the latest VirtualBox release).<br>
+ * <code>Linux 5.13.13-200.fc34.x86_64</code>
+ * <code>VirtualBox-6.1.26-2.fc34</code>
 
 
 ### Solaris 8 x86
