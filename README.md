@@ -7,7 +7,7 @@ of installing Solaris 8 x86 in VirtualBox.<br>
 
 # Contents
 * [Introduction](#introduction)
-  * [What’s NEW](#whats_new)
+  * [What’s NEW](#whats_new) 🔥
   * [Disclaimer](#disclaimer)
 * [System & Software Requirements](#system-requirements)
   * [VirtualBox <code>4.3.32-1</code>](#virtualbox-rpmfusion)
@@ -72,7 +72,10 @@ these steps, TODO
 
 <a name="whats_new"></a>
 #### <span style="text-align:left;">What’s NEW<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
-* [Latest Fedora release](#latest_fedora_release)
+* [Latest Fedora 34 Release Tested](#latest_fedora_release)
+* gcc-4.7.4-2 has been added.<br>
+As of November 2020, [jupiterrise.com](http://jupiterrise.com/tgcware/sunos5.8_x86/stable/) has added
+[gcc-4.7.4-2](https://jupiterrise.com/tgcware/sunos5.8_x86/stable/gcc-4.7.4-2.tgc-sunos5.8-i386-tgcware.gz)
 
 <a name="disclaimer"></a>
 ### <span style="text-align:left;">Disclaimer<span style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;[:top:](#top00)</span></span>
